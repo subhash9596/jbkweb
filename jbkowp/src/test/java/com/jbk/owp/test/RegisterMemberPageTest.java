@@ -4,8 +4,6 @@ import org.openqa.selenium.Alert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -134,24 +132,24 @@ public class RegisterMemberPageTest extends TestBase {
 		logger = extend.createTest("verifyRegisterMemberValidinfo", "This test case validate to check Register Member functionality with Validinfo");
 		Assert.assertEquals(actResult, expResult);
 		driver.switchTo().alert().accept();
-		//driver.findElement(By.xpath("/html/body/div/div[2]/a")).click();
-
-	}
-	@Test(priority=10,groups="Regression")
-	public void verifyAlreadyMembershipLink() throws Exception{
-		System.out.println("verifyAlreadyMembershipLink===>>out");
-
-		  WebDriverWait wait = new WebDriverWait(driver, 15);
-		  WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/a/h4")));
-		  String actText= element.getText();
-		  
 		driver.findElement(By.xpath("/html/body/div/div[2]/a")).click();
-	  //  String actText=	driver.findElement(By.xpath("/html/body/div/div[1]/a/h4")).getText();
-	    String expText = "JAVA | SELENIUM | PYTHON";
-	    logger = extend.createTest("verifyAlreadyMembershipLink", "This test case validate to check Already Membership Link");
-	    Assert.assertEquals(actText, expText);
-	    
+
 	}
+//	@Test(priority=10,groups="Regression")
+//	public void verifyAlreadyMembershipLink() throws Exception{
+//		System.out.println("verifyAlreadyMembershipLink===>>out");
+//
+//		  WebDriverWait wait = new WebDriverWait(driver, 15);
+//		  WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/a/h4")));
+//		  String actText= element.getText();
+//		  
+//		driver.findElement(By.xpath("/html/body/div/div[2]/a")).click();
+//	  //  String actText=	driver.findElement(By.xpath("/html/body/div/div[1]/a/h4")).getText();
+//	    String expText = "JAVA | SELENIUM | PYTHON";
+//	    logger = extend.createTest("verifyAlreadyMembershipLink", "This test case validate to check Already Membership Link");
+//	    Assert.assertEquals(actText, expText);
+//	    
+//	}
 	
 	
 }

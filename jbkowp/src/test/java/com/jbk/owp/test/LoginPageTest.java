@@ -35,7 +35,7 @@ public class LoginPageTest extends TestBase {
 		Assert.assertEquals(my_title, expected_title);
 
 	}
-	@Test(priority=3,groups="Regression")
+	@Test(priority=12,groups="Regression")
 	public void verifyTitle(){
 		System.out.println("Login Testcase 03 >> verifyTitle");
 		String my_title=driver.findElement(By.xpath("/html/body/div/div[1]/a/b")).getText();
@@ -47,7 +47,7 @@ public class LoginPageTest extends TestBase {
 		System.out.println("===================================");
 
 	}
-	@Test(priority=4,groups="Regression")
+	@Test(priority=13,groups="Regression")
 	public void verifyloginsesion(){
 		System.out.println("Login Testcase 04 >> verifyloginsesion");
 		String actStr = driver.findElement(By.xpath("/html/body/div/div[2]/p")).getText();
@@ -58,7 +58,7 @@ public class LoginPageTest extends TestBase {
 		System.out.println("==================================");
 
 	}
-	@Test(priority=5,groups="Regression")
+	@Test(priority=14,groups="Regression")
 	public void verifyPlaceHolderUsername() {
 		System.out.println("Login Testcase 05 >> verifyPlaceHolderUsername");
 		String actUnPlace = driver.findElement(By.xpath("//*[@id='email']")).getAttribute("placeholder");
@@ -70,7 +70,7 @@ public class LoginPageTest extends TestBase {
 	
 		System.out.println("Test case fifth with Thread id : ="+Thread.currentThread().getId());
 	}
-	@Test(priority=6,groups="Regression")
+	@Test(priority=15,groups="Regression")
 	public void verifyPlaceHolderPassword() {
 		System.out.println("Login Testcase 06 >> verifyPlaceHolderPassword");
 		String actPwdPlace = driver.findElement(By.xpath("//*[@id='password']")).getAttribute("placeholder");
@@ -80,7 +80,7 @@ public class LoginPageTest extends TestBase {
 		logger=extend.createTest("verifyPlaceHolderPassword", "This test case validate to check placeholder of password on login page");
 		Assert.assertEquals(actPwdPlace, expPwdPlace);
 	}	
-	@Test(priority=7,groups="Regression")
+	@Test(priority=16,groups="Regression")
 	public void verifyButtoncolor() {
 		System.out.println("Login Testcase 07 >> verifyButtoncolor");
 		WebElement btnLogin=  driver.findElement(By.xpath("//button[contains(text(),'Sign In')]"));
@@ -91,7 +91,7 @@ public class LoginPageTest extends TestBase {
 		System.out.println("after mouse over button color"+ btnLogin.getCssValue("color"));
 	
 	}
-	@Test(priority=8,groups="Regression")
+	@Test(priority=17,groups="Regression")
 	public void verifyLinks(){
 		System.out.println("Login Testcase 08 >> verifyLinks");
 		logger=extend.createTest("verifyLinks", "This test case validate to check all links ");
@@ -102,7 +102,7 @@ public class LoginPageTest extends TestBase {
 			System.out.println("All the links avilabe >>>"+links.get(i).getText());
 		}
 	}
-	@Test(priority=9,groups="Regression",dataProvider="login")
+	@Test(priority=18,groups="Regression",dataProvider="login")
 	public void Login(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
 		
 		System.out.println("Test Case ID >>"+tcId);
