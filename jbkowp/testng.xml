@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+    <classes>
+      <class name="com.jbk.owp.test.DashboardLinksPageTest"/>
+      <class name="com.jbk.owp.test.RegisterMemberPageTest"/>
+      <class name="com.jbk.owp.base.TestBase"/>
+      <class name="com.jbk.owp.test.AppTest"/>
+      <class name="com.jbk.owp.test.LoginPageTest"/>
+      <class name="com.jbk.owp.test.AddUserPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
