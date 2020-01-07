@@ -10,7 +10,7 @@
           <include name="verifyPlaceholderEmail"/>
           <include name="setUp"/>
           <include name="verifyPlaceholderMobile"/>
-          <include name="tearDown"/>
+          <include name="tearDown1"/>
           <include name="verifyHeading"/>
           <include name="verifyRegisterMemberValidinfo"/>
           <include name="verifyRegisterMemberlink"/>
@@ -26,9 +26,9 @@
           <include name="verifyPlaceHolderUsername"/>
           <include name="setUp"/>
           <include name="verifyPlaceHolderPassword"/>
+          <include name="tearDown1"/>
           <include name="verifyButtoncolor"/>
           <include name="verifyloginsesion"/>
-          <include name="tearDown"/>
           <include name="Login"/>
           <include name="verifyApplicationTitle"/>
           <include name="verifyLinks"/>
