@@ -1,4 +1,4 @@
-package com.jbk.owp.test;
+	package com.jbk.owp.test;
 
 import org.openqa.selenium.Alert;
 
@@ -6,12 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.jbk.owp.base.TestBase;
-
-
+//File InputStream - It is a class and using method read the any files ..
+//workbook class - 
 public class RegisterMemberPageTest extends TestBase {
-	
 	@Test(priority=1,groups="Regression")
 	public void verifyRegisterMemberlink() {
 		System.out.println("RegTest o1 >>> verifyRegisterMemberlink");
@@ -144,12 +142,12 @@ public class RegisterMemberPageTest extends TestBase {
 //		  String actText= element.getText();
 //		  
 //		driver.findElement(By.xpath("/html/body/div/div[2]/a")).click();
-//	  //  String actText=	driver.findElement(By.xpath("/html/body/div/div[1]/a/h4")).getText();
+//	     String actText=	driver.findElement(By.xpath("/html/body/div/div[1]/a/h4")).getText();
 //	    String expText = "JAVA | SELENIUM | PYTHON";
 //	    logger = extend.createTest("verifyAlreadyMembershipLink", "This test case validate to check Already Membership Link");
 //	    Assert.assertEquals(actText, expText);
 //	    
 //	}
-	
+//	
 	
 }

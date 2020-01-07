@@ -13,8 +13,8 @@ import com.jbk.owp.base.TestBase;
 
 
 public class LoginPageTest extends TestBase {
-	
-	@Test(priority=1,groups="Regression")
+
+	@Test(priority=10,groups="Regression")
 	public void verifyUrl() throws Exception{
 		//Actual Result 
 	System.out.println("Login Testcase 01 >> verifyUrl"); 
@@ -25,7 +25,7 @@ public class LoginPageTest extends TestBase {
 		Assert.assertEquals(my_url, expected_url);
 	
 	}
-	@Test(priority=2,groups="Regression")
+	@Test(priority=11,groups="Regression")
 	public void verifyApplicationTitle(){
 		System.out.println("Login Testcase 02 >> verifyApplicationTitle");
 		String my_title=driver.getTitle();
