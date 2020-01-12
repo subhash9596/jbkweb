@@ -3,6 +3,23 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+      <class name="com.jbk.owp.test.LoginPageTest">
+        <methods>
+          <include name="verifyPlaceHolderUsername"/>
+          <include name="setUp"/>
+          <include name="verifyPlaceHolderPassword"/>
+          <include name="tearDown1"/>
+          <include name="verifyButtoncolor"/>
+          <include name="verifyloginsesion"/>
+          <include name="Login" invocation-numbers="0 1 2"/>
+          <include name="verifyApplicationTitle"/>
+          <include name="getResult"/>
+          <include name="CloseApplication"/>
+          <include name="setup_Browser"/>
+          <include name="verifyTitle"/>
+          <include name="verifyUrl"/>
+        </methods>
+      </class> <!-- com.jbk.owp.test.LoginPageTest -->
       <class name="com.jbk.owp.test.RegisterMemberPageTest">
         <methods>
           <include name="verifyPlaceholderName"/>
@@ -21,24 +38,6 @@
           <include name="setup_Browser"/>
         </methods>
       </class> <!-- com.jbk.owp.test.RegisterMemberPageTest -->
-      <class name="com.jbk.owp.test.LoginPageTest">
-        <methods>
-          <include name="verifyPlaceHolderUsername"/>
-          <include name="setUp"/>
-          <include name="verifyPlaceHolderPassword"/>
-          <include name="tearDown1"/>
-          <include name="verifyButtoncolor"/>
-          <include name="verifyloginsesion"/>
-          <include name="Login"/>
-          <include name="verifyApplicationTitle"/>
-          <include name="verifyLinks"/>
-          <include name="getResult"/>
-          <include name="CloseApplication"/>
-          <include name="setup_Browser"/>
-          <include name="verifyTitle"/>
-          <include name="verifyUrl"/>
-        </methods>
-      </class> <!-- com.jbk.owp.test.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

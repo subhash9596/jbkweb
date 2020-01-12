@@ -3,7 +3,7 @@
 <suite name="Suite">
  <test  name="Default test">
     <classes>
-<!--       <class name="com.jbk.owp.base.TestBase"/> -->
+      <class name="com.jbk.owp.base.TestBase"/>
       <class name="com.jbk.owp.test.RegisterMemberPageTest"/>
       <class name="com.jbk.owp.test.LoginPageTest"/> 
     </classes>

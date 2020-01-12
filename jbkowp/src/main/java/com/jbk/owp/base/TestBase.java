@@ -8,8 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
+
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
@@ -22,12 +21,15 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.jbk.owu.util.Configuration;
 import com.jbk.owu.util.PropertyManager;
 
+import com.jbk.owu.util.ScreenShots;
 
 public  class TestBase {
 	public static String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 	public static String currentDir = System.getProperty("user.dir");
+	Configuration getURL = new Configuration();
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extend ;
 	public static ExtentTest logger ;
@@ -36,8 +38,19 @@ public  class TestBase {
 	public static String environment = PropertyManager.getInstance().getEnvironment();
 	public static String suite = PropertyManager.getInstance().getSuite();
 	public static String qaurl = PropertyManager.getInstance().getQaurl();
+	public static String uaturl = PropertyManager.getInstance().getUaturl();
 
 	@BeforeSuite
+	
+//	public void setUp1() throws Exception{
+//		setup_Browser();
+//		get(Configuration.getURL());
+//		ScreenShots.CreateDirectory(currentDir + "\\" + "Reports");
+//		ScreenShots.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_EnsoulReport");
+//		ScreenShots.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_EnsoulReport\\Screenshots");
+//		//Reports.startReport();
+//	}
+
 	public static WebDriver setup_Browser(){
 		String browserName = browser;
 		System.out.println("Started");
@@ -68,12 +81,15 @@ public  class TestBase {
 			System.setProperty("webdriver.ie.driver", browser_path);
 			driver = new InternetExplorerDriver();
 		}
-		driver.get(qaurl);
+		
+		
+    	driver.get(qaurl);
 		System.out.println("QA URL >>>"+qaurl);
 		Reporter.log("=====Application Started ========",true);
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
+	
 	}
 	@AfterSuite
 	public void CloseApplication(){
@@ -128,5 +144,19 @@ public  class TestBase {
 		extend.flush();
 
 	}   
+	
+	//Selenium methods
+	
+	// This method can Redirects or Navigate to particular URL
+		public static void get(String url) throws Exception {
+			try {
+				if (url != null) {
+					driver.get(url);
+				}
+			} catch (Exception e) {
+				System.out.println("invaid URL pleaes check ");
+			}
+		}
+		
 }
 
