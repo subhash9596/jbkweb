@@ -24,7 +24,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.jbk.owu.util.Configuration;
 import com.jbk.owu.util.PropertyManager;
 
-import com.jbk.owu.util.ScreenShots;
 
 public  class TestBase {
 	public static String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
@@ -41,16 +40,6 @@ public  class TestBase {
 	public static String uaturl = PropertyManager.getInstance().getUaturl();
 
 	@BeforeSuite
-	
-//	public void setUp1() throws Exception{
-//		setup_Browser();
-//		get(Configuration.getURL());
-//		ScreenShots.CreateDirectory(currentDir + "\\" + "Reports");
-//		ScreenShots.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_EnsoulReport");
-//		ScreenShots.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_EnsoulReport\\Screenshots");
-//		//Reports.startReport();
-//	}
-
 	public static WebDriver setup_Browser(){
 		String browserName = browser;
 		System.out.println("Started");
