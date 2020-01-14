@@ -103,8 +103,8 @@ public class LoginPageTest extends TestBase {
 		}
 	}
 	@Test(priority=18,groups="Regression",dataProvider="login")
-	public void Login(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
-		
+	//public void Login(String Username,String Password) throws Exception{
+		public void Login(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
 		System.out.println("Test Case ID >>"+tcId);
 		System.out.println("Test Case ID >>"+tcDescription);
         driver.findElement(By.xpath("//*[@id='email']")).clear();
@@ -127,15 +127,16 @@ public class LoginPageTest extends TestBase {
 			logger=extend.createTest("LoginwithValidInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
 			Assert.assertEquals(acttx, expResult);
 		}
-	}
-	@DataProvider
-	public Object[][] login() {
-		return new Object[][] {
-			new Object[] { "TCJBK01", "BlankInfo","","","Please enter email." },
-			new Object[] { "TCJBK02", "InvalidInfo","abc","345","Please enter email as kiran@gmail.com"},
-			new Object[] { "TCJBK03", "ValidInfo","kiran@gmail.com","123456","Dashboard Courses Offered" },
-		};
+		}
+		
+		@DataProvider
+		public Object[][] login() {
+			return new Object[][] {
+				new Object[] { "TCJBK01", "BlankInfo","","","Please enter email." },
+				new Object[] { "TCJBK02", "InvalidInfo","abc","345","Please enter email as kiran@gmail.com"},
+				new Object[] { "TCJBK03", "ValidInfo","kiran@gmail.com","123456","Dashboard Courses Offered" },
+			};
 	}
     
-}
 
+	}
