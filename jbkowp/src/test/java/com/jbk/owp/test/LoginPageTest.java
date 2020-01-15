@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 
 
 import com.jbk.owp.base.TestBase;
+import com.jbk.owu.dataprovider.StaticDataProvider;
 import com.jbk.owu.util.ReadExcle;
 
 
@@ -22,13 +23,12 @@ public class LoginPageTest extends TestBase {
 	@Test(priority=10,groups="Regression")
 	public void verifyUrl() throws Exception{
 		//Actual Result 
-	System.out.println("Login Testcase 01 >> verifyUrl"); 
+		System.out.println("Login Testcase 01 >> verifyUrl"); 
 		String my_url = driver.getCurrentUrl();
 		System.out.println("url of login page::"+my_url);
 		String expected_url = "file:///E:/Offline%20Website/index.html";
 		logger=extend.createTest("verifyUrl", "This test case validate to check URL of offlien application");
 		Assert.assertEquals(my_url, expected_url);
-	
 	}
 	@Test(priority=11,groups="Regression")
 	public void verifyApplicationTitle(){
@@ -38,7 +38,6 @@ public class LoginPageTest extends TestBase {
 		String expected_title =  "JavaByKiran | Log in";
 		logger=extend.createTest("verifyApplicationTitle", "This test case validate to check Title of offline application");
 		Assert.assertEquals(my_title, expected_title);
-
 	}
 	@Test(priority=12,groups="Regression")
 	public void verifyTitle(){
@@ -61,7 +60,6 @@ public class LoginPageTest extends TestBase {
 		logger=extend.createTest("verifyloginsesion", "This test case validate to check session message on login page");
 		Assert.assertEquals(actStr, expStr);
 		System.out.println("==================================");
-
 	}
 	@Test(priority=14,groups="Regression")
 	public void verifyPlaceHolderUsername() {
@@ -72,7 +70,6 @@ public class LoginPageTest extends TestBase {
 		String expUnPlace = "Email";
 		logger=extend.createTest("verifyPlaceHolderUsername", "This test case validate to check placeholder of username on login page");
 		Assert.assertEquals(actUnPlace, expUnPlace);
-	
 		System.out.println("Test case fifth with Thread id : ="+Thread.currentThread().getId());
 	}
 	@Test(priority=15,groups="Regression")
@@ -94,7 +91,6 @@ public class LoginPageTest extends TestBase {
 		act.moveToElement(btnLogin).build().perform();
 		logger=extend.createTest("check_Button_color", "This test case validate to check sign in button color  on login page");
 		System.out.println("after mouse over button color"+ btnLogin.getCssValue("color"));
-	
 	}
 	@Test(priority=17,groups="Regression")
 	public void verifyLinks(){
@@ -107,22 +103,22 @@ public class LoginPageTest extends TestBase {
 			System.out.println("All the links avilabe >>>"+links.get(i).getText());
 		}
 	}
-	
-	@DataProvider
-	public Object[][] LoginData() throws EncryptedDocumentException, InvalidFormatException {
-		Object[][] testdata =ReadExcle.getDataFromXls("Login");
-		return testdata;
-	}	
-	@Test(priority=18,groups="Regression",dataProvider="LoginData")
-		public void Login(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
+
+//	@DataProvider
+//	public Object[][] LoginData() throws EncryptedDocumentException, InvalidFormatException {
+//		Object[][] testdata =ReadExcle.getDataFromXls("Login");
+//		return testdata;
+//	}	
+	@Test(priority=18,groups="Regression",dataProviderClass=StaticDataProvider.class,dataProvider = "d_login")
+	public void Login(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
 		System.out.println("Test Case ID >>"+tcId);
-	    System.out.println("Test Case ID >>"+tcDescription);
-        driver.findElement(By.xpath("//*[@id='email']")).clear();
+		System.out.println("Test Case ID >>"+tcDescription);
+		driver.findElement(By.xpath("//*[@id='email']")).clear();
 		driver.findElement(By.xpath("//*[@id='email']")).sendKeys(Username);
 		driver.findElement(By.xpath("//input[@id='password']")).clear();
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys(Password);
 		driver.findElement(By.xpath("//*[@id='form']/div[3]/div/button")).click();	
-	
+
 		if(tcDescription.equals("Withblankdinfo")){
 			String actResult= driver.findElement(By.xpath("//*[@id='email_error']")).getText();
 			logger=extend.createTest("LoginwithBlankInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
@@ -137,8 +133,9 @@ public class LoginPageTest extends TestBase {
 			logger=extend.createTest("LoginwithValidInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
 			Assert.assertEquals(acttx, expResult);
 		}
-		}
-		
+	}
+}
+
 //		@DataProvider
 //		public Object[][] login() {
 //			return new Object[][] {
@@ -147,6 +144,6 @@ public class LoginPageTest extends TestBase {
 //				new Object[] { "TCJBK03", "ValidInfo","kiran@gmail.com","123456","Dashboard Courses Offered" },
 //			};
 //	}
-    
 
-	}
+
+
