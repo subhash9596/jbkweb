@@ -38,7 +38,7 @@ public  class TestBase {
 	public static String suite = PropertyManager.getInstance().getSuite();
 	public static String qaurl = PropertyManager.getInstance().getQaurl();
 	public static String uaturl = PropertyManager.getInstance().getUaturl();
-
+	public static String xlFilePath= "C:/Users/Subhash/git/jbkowp/jbkowp/src/test/resources/OwpTestData.xlsx";
 	@BeforeSuite
 	public static WebDriver setup_Browser(){
 		String browserName = browser;

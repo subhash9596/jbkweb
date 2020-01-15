@@ -1,6 +1,9 @@
 package com.jbk.owp.test;
 
 import java.util.List;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.testng.annotations.Test;
 
 
 import com.jbk.owp.base.TestBase;
+import com.jbk.owu.util.ReadExcle;
+
 
 
 public class LoginPageTest extends TestBase {
@@ -102,25 +107,30 @@ public class LoginPageTest extends TestBase {
 			System.out.println("All the links avilabe >>>"+links.get(i).getText());
 		}
 	}
-	@Test(priority=18,groups="Regression",dataProvider="login")
-	//public void Login(String Username,String Password) throws Exception{
+	
+	@DataProvider
+	public Object[][] LoginData() throws EncryptedDocumentException, InvalidFormatException {
+		Object[][] testdata =ReadExcle.getDataFromXls("Login");
+		return testdata;
+	}	
+	@Test(priority=18,groups="Regression",dataProvider="LoginData")
 		public void Login(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
 		System.out.println("Test Case ID >>"+tcId);
-		System.out.println("Test Case ID >>"+tcDescription);
+	    System.out.println("Test Case ID >>"+tcDescription);
         driver.findElement(By.xpath("//*[@id='email']")).clear();
 		driver.findElement(By.xpath("//*[@id='email']")).sendKeys(Username);
 		driver.findElement(By.xpath("//input[@id='password']")).clear();
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys(Password);
-		driver.findElement(By.xpath("//*[@id='form']/div[3]/div/button")).click();
-
+		driver.findElement(By.xpath("//*[@id='form']/div[3]/div/button")).click();	
+	
 		if(tcDescription.equals("Withblankdinfo")){
 			String actResult= driver.findElement(By.xpath("//*[@id='email_error']")).getText();
 			logger=extend.createTest("LoginwithBlankInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
-			Assert.assertEquals(actResult, expResult);
+			Assert.assertEquals(actResult,expResult);
 		}else if(tcDescription.equals("InvalidInfo")){
 			String actResult1= driver.findElement(By.xpath("//*[@id='email_error']")).getText();
 			logger=extend.createTest("LoginwithInvalidInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
-			Assert.assertEquals(actResult1, expResult);
+			Assert.assertEquals(actResult1,expResult);
 		}else if(tcDescription.equals("InvalidInfo")){
 			WebElement text = driver.findElement(By.xpath("/html/body/div/div[1]/section[1]/h1"));
 			String acttx = text.getText();
@@ -129,14 +139,14 @@ public class LoginPageTest extends TestBase {
 		}
 		}
 		
-		@DataProvider
-		public Object[][] login() {
-			return new Object[][] {
-				new Object[] { "TCJBK01", "BlankInfo","","","Please enter email." },
-				new Object[] { "TCJBK02", "InvalidInfo","abc","345","Please enter email as kiran@gmail.com"},
-				new Object[] { "TCJBK03", "ValidInfo","kiran@gmail.com","123456","Dashboard Courses Offered" },
-			};
-	}
+//		@DataProvider
+//		public Object[][] login() {
+//			return new Object[][] {
+//				new Object[] { "TCJBK01", "BlankInfo","","","Please enter email." },
+//				new Object[] { "TCJBK02", "InvalidInfo","abc","345","Please enter email as kiran@gmail.com"},
+//				new Object[] { "TCJBK03", "ValidInfo","kiran@gmail.com","123456","Dashboard Courses Offered" },
+//			};
+//	}
     
 
 	}
