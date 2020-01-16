@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.jbk.owp.base.TestBase;
+import com.jbk.owu.util.Reports;
 public class AddUserPageTest extends TestBase {
 	@Test(priority=24)
 	public void verifyUserlink() throws InterruptedException{
@@ -11,7 +12,7 @@ public class AddUserPageTest extends TestBase {
 		Thread.sleep(2000);
 		String actResult =driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div/div[1]/h3")).getText();
 		String expResult = "User List";
-		logger = extend.createTest("verifyUserlink", "This test case validate to check user link form leftnavigation");
+		Reports.test=Reports.extent.createTest("verifyUserlink", "This test case validate to check user link form leftnavigation");
 		Assert.assertEquals(actResult, expResult);	
 	}	
 	@Test(priority=25)
@@ -20,13 +21,13 @@ public class AddUserPageTest extends TestBase {
 		Thread.sleep(2000);
 		String actResult =driver.findElement(By.xpath("//section[1]/h1")).getText();
 		String expResult = "Add User";
-		logger = extend.createTest("verifyTitle", "This test case validate to check title of user page");
+		Reports.test=Reports.extent.createTest("verifyTitle", "This test case validate to check title of user page");
 		Assert.assertEquals(actResult, expResult);
 		
 	}
 	@Test(priority=26)
 	public void verifyAdduserBlankinfo() throws Exception{
-		logger = extend.createTest("verifyAdduserBlankinfo", "This test case validate to check add user functionality with blnk info");
+		Reports.test=Reports.extent.createTest("verifyAdduserBlankinfo", "This test case validate to check add user functionality with blnk info");
 		Thread.sleep(2000);
 		WebElement actUsername= driver.findElement(By.xpath("//*[@id='username']"));
 		actUsername.sendKeys("");

@@ -3,12 +3,10 @@ package com.jbk.owp.base;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
@@ -18,29 +16,33 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.jbk.owu.util.Configuration;
 import com.jbk.owu.util.PropertyManager;
-
-
+import com.jbk.owu.util.Reports;
 public  class TestBase {
 	public static String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 	public static String currentDir = System.getProperty("user.dir");
 	Configuration getURL = new Configuration();
-	public static ExtentHtmlReporter htmlReporter;
-	public static ExtentReports extend ;
-	public static ExtentTest logger ;
 	public static WebDriver  driver;
 	public static String browser = PropertyManager.getInstance().getBrowser();
 	public static String environment = PropertyManager.getInstance().getEnvironment();
 	public static String suite = PropertyManager.getInstance().getSuite();
 	public static String qaurl = PropertyManager.getInstance().getQaurl();
 	public static String uaturl = PropertyManager.getInstance().getUaturl();
+	public static String projectName = PropertyManager.getInstance().getProject();
 	public static String xlFilePath= "C:/Users/Subhash/git/jbkowp/jbkowp/src/test/resources/OwpTestData.xlsx";
 	@BeforeSuite
-	public static WebDriver setup_Browser(){
+	public void Setup(){
+		openBrowser();
+		Reporter.log("=====Application Started ========",true);
+		driver.get(qaurl);
+		Reports.startReport();
+	}
+	public static WebDriver openBrowser(){
 		String browserName = browser;
 		System.out.println("Started");
 		Reporter.log("Test is Starting");
@@ -70,12 +72,7 @@ public  class TestBase {
 			System.setProperty("webdriver.ie.driver", browser_path);
 			driver = new InternetExplorerDriver();
 		}
-		
-		
-    	driver.get(qaurl);
-		System.out.println("QA URL >>>"+qaurl);
-		Reporter.log("=====Application Started ========",true);
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
 	
@@ -109,30 +106,42 @@ public  class TestBase {
 	
 
 	//Report Generate 
-	@BeforeSuite
-	public void setUp() {
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/extendReport.html");
-		extend = new ExtentReports();
-		extend.attachReporter(htmlReporter);
-	}
+//	@BeforeSuite
+//	public void setUp() {
+//		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/extendReport.html");
+//		extend = new ExtentReports();
+//		extend.attachReporter(htmlReporter);
+//	}
+//	@AfterMethod
+//	public void getResult(ITestResult result){
+//		if(result.getStatus()==ITestResult.FAILURE){
+//			logger.fail(MarkupHelper.createLabel(result.getName()+"  Test Case Failed", ExtentColor.RED));
+//		  logger.fail(result.getThrowable());
+//		}else if (result.getStatus()==ITestResult.SUCCESS){
+//			logger.pass(MarkupHelper.createLabel(result.getName()+"  Test Case Passed", ExtentColor.GREEN));	
+//		}else
+//		{
+//			logger.skip(MarkupHelper.createLabel(result.getName()+"  Test Case Skiped", ExtentColor.YELLOW));
+//			logger.skip(result.getThrowable());
+//		}
+//	}
+//	
 	@AfterMethod
-	public void getResult(ITestResult result){
-		if(result.getStatus()==ITestResult.FAILURE){
-			logger.fail(MarkupHelper.createLabel(result.getName()+"  Test Case Failed", ExtentColor.RED));
-			logger.fail(result.getThrowable());
-		}else if (result.getStatus()==ITestResult.SUCCESS){
-			logger.pass(MarkupHelper.createLabel(result.getName()+"  Test Case Passed", ExtentColor.GREEN));	
-		}else
-		{
-			logger.skip(MarkupHelper.createLabel(result.getName()+"  Test Case Skiped", ExtentColor.YELLOW));
-			logger.skip(result.getThrowable());
-		}
+	public void getResult(ITestResult result) {
+		if (result.getStatus() == ITestResult.FAILURE) {
+			Reports.test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() +" Test Case Failed ", ExtentColor.RED));
+			Reports.test.fail(result.getThrowable());
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
+			Reports.test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+"Test Case Passsed",ExtentColor.GREEN));
+		} else {
+			Reports.test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() +" Test Case Skip ", ExtentColor.ORANGE));
+			Reports.test.skip(result.getThrowable());
+		}Reports.extent.flush();
 	}
-	@AfterSuite
-	public void tearDown1(){
-		extend.flush();
-
-	}   
+//	@AfterSuite
+//	public void tearDown1(){
+//		Reports.extent.flush();
+//	}   
 	
 	//Selenium methods
 	

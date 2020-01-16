@@ -38,7 +38,6 @@ public class ReadExcle extends TestBase {
 		{
 			for(int j=0;j<sheet.getRow(0).getLastCellNum();j++)
 			{
-				System.out.println(99999);
 				data[i][j]=sheet.getRow(i+1).getCell(j).toString();
 			}
 

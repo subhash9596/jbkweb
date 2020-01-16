@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.jbk.owp.base.TestBase;
+import com.jbk.owu.util.Reports;
 
 
 public class DashboardLinksPageTest extends TestBase{
@@ -20,7 +21,7 @@ public class DashboardLinksPageTest extends TestBase{
 			Thread.sleep(2000);
 			String actResult =driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div/div[1]/h3")).getText();
 			String expResult = "User List";
-			logger = extend.createTest("verifyUserLink", "This test case validate to check User link from leftnavigation");
+			Reports.test=Reports.extent.createTest("verifyUserLink", "This test case validate to check User link from leftnavigation");
 			Assert.assertEquals(actResult, expResult);
 		} catch (NoSuchElementException e) {
 			System.out.println("Page not found >>> It is a error ");
@@ -35,7 +36,7 @@ public class DashboardLinksPageTest extends TestBase{
 			driver.findElement(By.xpath("//ul[@class='sidebar-menu']//*[.='Operators']")).click();
 			String actResult =driver.findElement(By.xpath("/html/body/div/div[1]/section[1]/h1")).getText();
 			String expResult = "Operators";
-			logger = extend.createTest("verifyOperatorslink", "This test case validate to check Operators link from leftnavigation");
+			Reports.test=Reports.extent.createTest("verifyOperatorslink", "This test case validate to check Operators link from leftnavigation");
 			Assert.assertEquals(actResult, expResult);	
 		} catch (NoSuchElementException e) {
 			System.out.println("Page not found");
@@ -48,7 +49,7 @@ public class DashboardLinksPageTest extends TestBase{
 		driver.findElement(By.xpath("//ul[@class='sidebar-menu']//*[.='     Useful Links']")).click();
 		String actResult =driver.findElement(By.xpath("/html/body/div/div[1]/section[1]/h1")).getText();
 		String expResult = "Useful Links";
-		logger = extend.createTest("verifyUsefullink", "This test case validate to check Userful link from leftnavigation");
+		Reports.test=Reports.extent.createTest("verifyUsefullink", "This test case validate to check Userful link from leftnavigation");
 		Assert.assertEquals(actResult, expResult);
 		System.out.println("==========================");
 	}
@@ -59,7 +60,7 @@ public class DashboardLinksPageTest extends TestBase{
 		Thread.sleep(2000);
 		String actResult =driver.findElement(By.xpath("/html/body/div/div[1]/section[1]/h1")).getText();
 		String expResult = "Downloads";
-		logger = extend.createTest("verifyDownloadlink", "This test case validate to check Download link from leftnavigation");
+		Reports.test=Reports.extent.createTest("verifyDownloadlink", "This test case validate to check Download link from leftnavigation");
 		Assert.assertEquals(actResult, expResult);
 		System.out.println("==========================");
 	}

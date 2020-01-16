@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="11" passed="11">
+<testng-results skipped="0" failed="1" ignored="4" total="24" passed="19">
   <reporter-output>
     <line>
       <![CDATA[Test is Starting]]>
@@ -11,157 +11,195 @@
       <![CDATA[===== Browser Session End  ========]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8077" started-at="2020-01-15T13:08:53Z" finished-at="2020-01-15T13:09:01Z">
+  <suite name="Suite" duration-ms="8497" started-at="2020-01-16T19:05:07Z" finished-at="2020-01-16T19:05:16Z">
     <groups>
+      <group name="Regrression">
+        <method signature="RegisterMemberPageTest.verifyErrorMessageRegistermember()[pri:8, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyErrorMessageRegistermember" class="com.jbk.owp.test.RegisterMemberPageTest"/>
+      </group> <!-- Regrression -->
       <group name="Regression">
-        <method signature="LoginPageTest.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="Login" class="com.jbk.owp.test.LoginPageTest"/>
-        <method signature="LoginPageTest.verifyApplicationTitle()[pri:11, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyApplicationTitle" class="com.jbk.owp.test.LoginPageTest"/>
-        <method signature="LoginPageTest.verifyButtoncolor()[pri:16, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyButtoncolor" class="com.jbk.owp.test.LoginPageTest"/>
-        <method signature="LoginPageTest.verifyLinks()[pri:17, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyLinks" class="com.jbk.owp.test.LoginPageTest"/>
-        <method signature="LoginPageTest.verifyPlaceHolderPassword()[pri:15, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyPlaceHolderPassword" class="com.jbk.owp.test.LoginPageTest"/>
-        <method signature="LoginPageTest.verifyPlaceHolderUsername()[pri:14, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyPlaceHolderUsername" class="com.jbk.owp.test.LoginPageTest"/>
-        <method signature="LoginPageTest.verifyTitle()[pri:12, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyTitle" class="com.jbk.owp.test.LoginPageTest"/>
-        <method signature="LoginPageTest.verifyUrl()[pri:10, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyUrl" class="com.jbk.owp.test.LoginPageTest"/>
-        <method signature="LoginPageTest.verifyloginsesion()[pri:13, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyloginsesion" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="LoginPageTest.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="Login" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyApplicationTitle()[pri:11, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyApplicationTitle" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyButtoncolor()[pri:16, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyButtoncolor" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyLinks()[pri:17, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyLinks" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyPlaceHolderPassword()[pri:15, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyPlaceHolderPassword" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyPlaceHolderUsername()[pri:14, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyPlaceHolderUsername" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyTitle()[pri:12, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyTitle" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyUrl()[pri:10, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyUrl" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="LoginPageTest.verifyloginsesion()[pri:13, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyloginsesion" class="com.jbk.owp.test.LoginPageTest"/>
+        <method signature="RegisterMemberPageTest.verifyHeading()[pri:2, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyHeading" class="com.jbk.owp.test.RegisterMemberPageTest"/>
+        <method signature="RegisterMemberPageTest.verifyPlaceholderEmail()[pri:5, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyPlaceholderEmail" class="com.jbk.owp.test.RegisterMemberPageTest"/>
+        <method signature="RegisterMemberPageTest.verifyPlaceholderMobile()[pri:4, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyPlaceholderMobile" class="com.jbk.owp.test.RegisterMemberPageTest"/>
+        <method signature="RegisterMemberPageTest.verifyPlaceholderName()[pri:3, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyPlaceholderName" class="com.jbk.owp.test.RegisterMemberPageTest"/>
+        <method signature="RegisterMemberPageTest.verifyPlaceholderPassword()[pri:6, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyPlaceholderPassword" class="com.jbk.owp.test.RegisterMemberPageTest"/>
+        <method signature="RegisterMemberPageTest.verifyRegisterMemberValidinfo()[pri:9, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyRegisterMemberValidinfo" class="com.jbk.owp.test.RegisterMemberPageTest"/>
+        <method signature="RegisterMemberPageTest.verifyRegisterMemberlink()[pri:1, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyRegisterMemberlink" class="com.jbk.owp.test.RegisterMemberPageTest"/>
+        <method signature="RegisterMemberPageTest.verifyRegistermemberBlankinfo()[pri:7, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyRegistermemberBlankinfo" class="com.jbk.owp.test.RegisterMemberPageTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="8077" started-at="2020-01-15T13:08:53Z" finished-at="2020-01-15T13:09:01Z">
+    <test name="Default test" duration-ms="8497" started-at="2020-01-16T19:05:07Z" finished-at="2020-01-16T19:05:16Z">
       <class name="com.jbk.owp.test.LoginPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="setUp" is-config="true" duration-ms="514" started-at="2020-01-15T13:07:56Z" finished-at="2020-01-15T13:07:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setup_Browser()[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="setup_Browser" is-config="true" duration-ms="56344" started-at="2020-01-15T13:07:57Z" finished-at="2020-01-15T13:08:53Z">
-          <reporter-output>
-            <line>
-              <![CDATA[Test is Starting]]>
-            </line>
-            <line>
-              <![CDATA[=====Application Started ========]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- setup_Browser -->
-        <test-method status="PASS" signature="verifyUrl()[pri:10, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyUrl" duration-ms="241" started-at="2020-01-15T13:08:53Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="verifyUrl()[pri:10, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyUrl" duration-ms="5" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUrl -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="67" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="53" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUrl status=SUCCESS method=LoginPageTest.verifyUrl()[pri:10, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUrl status=SUCCESS method=LoginPageTest.verifyUrl()[pri:10, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyApplicationTitle()[pri:11, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyApplicationTitle" duration-ms="8" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="FAIL" signature="verifyApplicationTitle()[pri:11, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyApplicationTitle" duration-ms="4" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [JavaByKiran | Loa in] but found [JavaByKiran | Log in]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [JavaByKiran | Loa in] but found [JavaByKiran | Log in]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at com.jbk.owp.test.LoginPageTest.verifyApplicationTitle(LoginPageTest.java:36)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyApplicationTitle -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="1" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="68" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyApplicationTitle status=SUCCESS method=LoginPageTest.verifyApplicationTitle()[pri:11, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=verifyApplicationTitle status=FAILURE method=LoginPageTest.verifyApplicationTitle()[pri:11, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyTitle()[pri:12, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyTitle" duration-ms="549" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="verifyTitle()[pri:12, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyTitle" duration-ms="18" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitle -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="0" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="64" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyTitle status=SUCCESS method=LoginPageTest.verifyTitle()[pri:12, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTitle status=SUCCESS method=LoginPageTest.verifyTitle()[pri:12, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyloginsesion()[pri:13, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyloginsesion" duration-ms="56" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="verifyloginsesion()[pri:13, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyloginsesion" duration-ms="20" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyloginsesion -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="0" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="68" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyloginsesion status=SUCCESS method=LoginPageTest.verifyloginsesion()[pri:13, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=verifyloginsesion status=SUCCESS method=LoginPageTest.verifyloginsesion()[pri:13, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyPlaceHolderUsername()[pri:14, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyPlaceHolderUsername" duration-ms="113" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="verifyPlaceHolderUsername()[pri:14, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyPlaceHolderUsername" duration-ms="28" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPlaceHolderUsername -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="1" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="94" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyPlaceHolderUsername status=SUCCESS method=LoginPageTest.verifyPlaceHolderUsername()[pri:14, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=verifyPlaceHolderUsername status=SUCCESS method=LoginPageTest.verifyPlaceHolderUsername()[pri:14, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyPlaceHolderPassword()[pri:15, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyPlaceHolderPassword" duration-ms="28" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="verifyPlaceHolderPassword()[pri:15, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyPlaceHolderPassword" duration-ms="36" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPlaceHolderPassword -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="1" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:54Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="99" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyPlaceHolderPassword status=SUCCESS method=LoginPageTest.verifyPlaceHolderPassword()[pri:15, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=verifyPlaceHolderPassword status=SUCCESS method=LoginPageTest.verifyPlaceHolderPassword()[pri:15, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyButtoncolor()[pri:16, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyButtoncolor" duration-ms="229" started-at="2020-01-15T13:08:54Z" finished-at="2020-01-15T13:08:55Z">
+        <test-method status="PASS" signature="verifyButtoncolor()[pri:16, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyButtoncolor" duration-ms="162" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyButtoncolor -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="1" started-at="2020-01-15T13:08:55Z" finished-at="2020-01-15T13:08:55Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="132" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyButtoncolor status=SUCCESS method=LoginPageTest.verifyButtoncolor()[pri:16, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=verifyButtoncolor status=SUCCESS method=LoginPageTest.verifyButtoncolor()[pri:16, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyLinks()[pri:17, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="verifyLinks" duration-ms="136" started-at="2020-01-15T13:08:55Z" finished-at="2020-01-15T13:08:55Z">
+        <test-method status="PASS" signature="verifyLinks()[pri:17, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="verifyLinks" duration-ms="22" started-at="2020-01-16T19:05:12Z" finished-at="2020-01-16T19:05:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="1" started-at="2020-01-15T13:08:55Z" finished-at="2020-01-15T13:08:55Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="113" started-at="2020-01-16T19:05:12Z" finished-at="2020-01-16T19:05:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLinks status=SUCCESS method=LoginPageTest.verifyLinks()[pri:17, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLinks status=SUCCESS method=LoginPageTest.verifyLinks()[pri:17, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="Login" duration-ms="786" started-at="2020-01-15T13:08:57Z" data-provider="d_login" finished-at="2020-01-15T13:08:58Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="Login" duration-ms="350" started-at="2020-01-16T19:05:12Z" data-provider="d_login" finished-at="2020-01-16T19:05:13Z">
           <params>
             <param index="0">
               <value>
@@ -192,18 +230,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="1" started-at="2020-01-15T13:08:58Z" finished-at="2020-01-15T13:08:58Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="123" started-at="2020-01-16T19:05:13Z" finished-at="2020-01-16T19:05:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login status=SUCCESS method=LoginPageTest.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=Login status=SUCCESS method=LoginPageTest.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="Login" duration-ms="637" started-at="2020-01-15T13:08:58Z" data-provider="d_login" finished-at="2020-01-15T13:08:59Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="Login" duration-ms="525" started-at="2020-01-16T19:05:13Z" data-provider="d_login" finished-at="2020-01-16T19:05:13Z">
           <params>
             <param index="0">
               <value>
@@ -234,18 +272,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="1" started-at="2020-01-15T13:08:59Z" finished-at="2020-01-15T13:08:59Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="100" started-at="2020-01-16T19:05:13Z" finished-at="2020-01-16T19:05:13Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login status=SUCCESS method=LoginPageTest.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=Login status=SUCCESS method=LoginPageTest.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="Login" duration-ms="2398" started-at="2020-01-15T13:08:59Z" data-provider="d_login" finished-at="2020-01-15T13:09:01Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="Login" duration-ms="2298" started-at="2020-01-16T19:05:13Z" data-provider="d_login" finished-at="2020-01-16T19:05:16Z">
           <params>
             <param index="0">
               <value>
@@ -276,29 +314,174 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="getResult" is-config="true" duration-ms="2" started-at="2020-01-15T13:09:01Z" finished-at="2020-01-15T13:09:01Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@57855c9a]" name="getResult" is-config="true" duration-ms="114" started-at="2020-01-16T19:05:16Z" finished-at="2020-01-16T19:05:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login status=SUCCESS method=LoginPageTest.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@6321e813] output={null}]]]>
+                <![CDATA[[TestResult name=Login status=SUCCESS method=LoginPageTest.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@57855c9a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="CloseApplication()[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="CloseApplication" is-config="true" duration-ms="8996" started-at="2020-01-15T13:09:02Z" finished-at="2020-01-15T13:09:11Z">
+      </class> <!-- com.jbk.owp.test.LoginPageTest -->
+      <class name="com.jbk.owp.base.TestBase">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.jbk.owp.base.TestBase@79be0360]" name="Setup" is-config="true" duration-ms="11170" started-at="2020-01-16T19:04:56Z" finished-at="2020-01-16T19:05:07Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Test is Starting]]>
+            </line>
+            <line>
+              <![CDATA[=====Application Started ========]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="CloseApplication()[pri:0, instance:com.jbk.owp.base.TestBase@79be0360]" name="CloseApplication" is-config="true" duration-ms="5335" started-at="2020-01-16T19:05:16Z" finished-at="2020-01-16T19:05:21Z">
           <reporter-output>
             <line>
               <![CDATA[===== Browser Session End  ========]]>
             </line>
           </reporter-output>
         </test-method> <!-- CloseApplication -->
-        <test-method status="PASS" signature="tearDown1()[pri:0, instance:com.jbk.owp.test.LoginPageTest@6321e813]" name="tearDown1" is-config="true" duration-ms="904" started-at="2020-01-15T13:09:11Z" finished-at="2020-01-15T13:09:12Z">
+      </class> <!-- com.jbk.owp.base.TestBase -->
+      <class name="com.jbk.owp.test.RegisterMemberPageTest">
+        <test-method status="PASS" signature="verifyRegisterMemberlink()[pri:1, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyRegisterMemberlink" duration-ms="460" started-at="2020-01-16T19:05:07Z" finished-at="2020-01-16T19:05:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown1 -->
-      </class> <!-- com.jbk.owp.test.LoginPageTest -->
+        </test-method> <!-- verifyRegisterMemberlink -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="392" started-at="2020-01-16T19:05:08Z" finished-at="2020-01-16T19:05:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRegisterMemberlink status=SUCCESS method=RegisterMemberPageTest.verifyRegisterMemberlink()[pri:1, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="verifyHeading()[pri:2, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyHeading" duration-ms="6" started-at="2020-01-16T19:05:08Z" finished-at="2020-01-16T19:05:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeading -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="126" started-at="2020-01-16T19:05:08Z" finished-at="2020-01-16T19:05:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyHeading status=SUCCESS method=RegisterMemberPageTest.verifyHeading()[pri:2, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="verifyPlaceholderName()[pri:3, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyPlaceholderName" duration-ms="48" started-at="2020-01-16T19:05:08Z" finished-at="2020-01-16T19:05:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPlaceholderName -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="100" started-at="2020-01-16T19:05:08Z" finished-at="2020-01-16T19:05:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPlaceholderName status=SUCCESS method=RegisterMemberPageTest.verifyPlaceholderName()[pri:3, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="verifyPlaceholderMobile()[pri:4, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyPlaceholderMobile" duration-ms="28" started-at="2020-01-16T19:05:09Z" finished-at="2020-01-16T19:05:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPlaceholderMobile -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="50" started-at="2020-01-16T19:05:09Z" finished-at="2020-01-16T19:05:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPlaceholderMobile status=SUCCESS method=RegisterMemberPageTest.verifyPlaceholderMobile()[pri:4, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="verifyPlaceholderEmail()[pri:5, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyPlaceholderEmail" duration-ms="19" started-at="2020-01-16T19:05:09Z" finished-at="2020-01-16T19:05:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPlaceholderEmail -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="59" started-at="2020-01-16T19:05:09Z" finished-at="2020-01-16T19:05:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPlaceholderEmail status=SUCCESS method=RegisterMemberPageTest.verifyPlaceholderEmail()[pri:5, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="verifyPlaceholderPassword()[pri:6, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyPlaceholderPassword" duration-ms="19" started-at="2020-01-16T19:05:09Z" finished-at="2020-01-16T19:05:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPlaceholderPassword -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="70" started-at="2020-01-16T19:05:09Z" finished-at="2020-01-16T19:05:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyPlaceholderPassword status=SUCCESS method=RegisterMemberPageTest.verifyPlaceholderPassword()[pri:6, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="verifyRegistermemberBlankinfo()[pri:7, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyRegistermemberBlankinfo" duration-ms="489" started-at="2020-01-16T19:05:09Z" finished-at="2020-01-16T19:05:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistermemberBlankinfo -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="108" started-at="2020-01-16T19:05:09Z" finished-at="2020-01-16T19:05:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRegistermemberBlankinfo status=SUCCESS method=RegisterMemberPageTest.verifyRegistermemberBlankinfo()[pri:7, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="verifyErrorMessageRegistermember()[pri:8, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyErrorMessageRegistermember" duration-ms="273" started-at="2020-01-16T19:05:09Z" finished-at="2020-01-16T19:05:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrorMessageRegistermember -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="123" started-at="2020-01-16T19:05:10Z" finished-at="2020-01-16T19:05:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyErrorMessageRegistermember status=SUCCESS method=RegisterMemberPageTest.verifyErrorMessageRegistermember()[pri:8, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="verifyRegisterMemberValidinfo()[pri:9, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="verifyRegisterMemberValidinfo" duration-ms="924" started-at="2020-01-16T19:05:10Z" finished-at="2020-01-16T19:05:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterMemberValidinfo -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="68" started-at="2020-01-16T19:05:11Z" finished-at="2020-01-16T19:05:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyRegisterMemberValidinfo status=SUCCESS method=RegisterMemberPageTest.verifyRegisterMemberValidinfo()[pri:9, instance:com.jbk.owp.test.RegisterMemberPageTest@22a67b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+      </class> <!-- com.jbk.owp.test.RegisterMemberPageTest -->
     </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+  </suite> <!-- Suite -->
 </testng-results>

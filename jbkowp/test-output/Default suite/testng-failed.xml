@@ -6,11 +6,10 @@
       <class name="com.jbk.owp.test.LoginPageTest">
         <methods>
           <include name="getResult"/>
-          <include name="setUp"/>
           <include name="CloseApplication"/>
+          <include name="Setup"/>
           <include name="tearDown1"/>
-          <include name="setup_Browser"/>
-          <include name="Login"/>
+          <include name="verifyApplicationTitle"/>
         </methods>
       </class> <!-- com.jbk.owp.test.LoginPageTest -->
     </classes>

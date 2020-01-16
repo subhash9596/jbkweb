@@ -5,39 +5,12 @@
     <classes>
       <class name="com.jbk.owp.test.LoginPageTest">
         <methods>
-          <include name="verifyPlaceHolderUsername"/>
-          <include name="setUp"/>
-          <include name="verifyPlaceHolderPassword"/>
-          <include name="tearDown1"/>
-          <include name="verifyButtoncolor"/>
-          <include name="verifyloginsesion"/>
-          <include name="Login" invocation-numbers="0 1 2"/>
-          <include name="verifyApplicationTitle"/>
           <include name="getResult"/>
           <include name="CloseApplication"/>
-          <include name="setup_Browser"/>
-          <include name="verifyTitle"/>
-          <include name="verifyUrl"/>
+          <include name="Setup"/>
+          <include name="verifyApplicationTitle"/>
         </methods>
       </class> <!-- com.jbk.owp.test.LoginPageTest -->
-      <class name="com.jbk.owp.test.RegisterMemberPageTest">
-        <methods>
-          <include name="verifyPlaceholderName"/>
-          <include name="verifyPlaceholderPassword"/>
-          <include name="verifyPlaceholderEmail"/>
-          <include name="setUp"/>
-          <include name="verifyPlaceholderMobile"/>
-          <include name="tearDown1"/>
-          <include name="verifyHeading"/>
-          <include name="verifyRegisterMemberValidinfo"/>
-          <include name="verifyRegisterMemberlink"/>
-          <include name="verifyRegistermemberBlankinfo"/>
-          <include name="getResult"/>
-          <include name="verifyErrorMessageRegistermember"/>
-          <include name="CloseApplication"/>
-          <include name="setup_Browser"/>
-        </methods>
-      </class> <!-- com.jbk.owp.test.RegisterMemberPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

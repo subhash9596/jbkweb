@@ -13,6 +13,5 @@ public class StaticDataProvider extends TestBase {
 	public Object[][] LoginData() throws EncryptedDocumentException, InvalidFormatException {
 		Object[][] testdata =ReadExcle.getDataFromXls("Login");
 		return testdata;
-
 }
 }
