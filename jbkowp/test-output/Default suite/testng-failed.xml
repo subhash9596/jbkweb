@@ -8,8 +8,7 @@
           <include name="getResult"/>
           <include name="CloseApplication"/>
           <include name="Setup"/>
-          <include name="tearDown1"/>
-          <include name="verifyApplicationTitle"/>
+          <include name="verifyTitle"/>
         </methods>
       </class> <!-- com.jbk.owp.test.LoginPageTest -->
     </classes>

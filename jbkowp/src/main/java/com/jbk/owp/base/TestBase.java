@@ -1,5 +1,6 @@
 package com.jbk.owp.base;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -23,6 +24,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.jbk.owu.util.Configuration;
 import com.jbk.owu.util.PropertyManager;
 import com.jbk.owu.util.Reports;
+import com.jbk.owu.util.Screenshot;
 public  class TestBase {
 	public static String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
 	public static String currentDir = System.getProperty("user.dir");
@@ -127,10 +129,12 @@ public  class TestBase {
 //	}
 //	
 	@AfterMethod
-	public void getResult(ITestResult result) {
+	public void getResult(ITestResult result) throws Exception {
 		if (result.getStatus() == ITestResult.FAILURE) {
 			Reports.test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() +" Test Case Failed ", ExtentColor.RED));
 			Reports.test.fail(result.getThrowable());
+			String screenshotpath=Screenshot.getScreenshot(driver,result.getName());
+			Reports.test.addScreenCaptureFromPath(screenshotpath);//add screenshot in report
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			Reports.test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+"Test Case Passsed",ExtentColor.GREEN));
 		} else {

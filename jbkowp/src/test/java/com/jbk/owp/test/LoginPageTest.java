@@ -30,7 +30,7 @@ public class LoginPageTest extends TestBase {
 		System.out.println("Login Testcase 02 >> verifyApplicationTitle");
 		String my_title=driver.getTitle();
 		System.out.println("Page Title of Login Page is:: "+my_title);
-		String expected_title =  "JavaByKiran | Loa in";
+		String expected_title =  "JavaByKiran | Log in";
 		Reports.test=Reports.extent.createTest("verifyApplicationTitle", "This test case validate to check Title of offline application");
 		Assert.assertEquals(my_title, expected_title);
 	}
@@ -40,7 +40,7 @@ public class LoginPageTest extends TestBase {
 		String my_title=driver.findElement(By.xpath("/html/body/div/div[1]/a/b")).getText();
 		System.out.println("Titel of login page :: "+my_title);
 		//Expected Result 
-		String exp_title = "Java By Kiran";
+		String exp_title = "Java By subhash";
 		Reports.test=Reports.extent.createTest("verifyTitle", "This test case validate to check text java by Kiran on login page ");
 		Assert.assertEquals(my_title, exp_title);
 		System.out.println("===================================");
@@ -50,7 +50,7 @@ public class LoginPageTest extends TestBase {
 	public void verifyloginsesion(){
 		System.out.println("Login Testcase 04 >> verifyloginsesion");
 		String actStr = driver.findElement(By.xpath("/html/body/div/div[2]/p")).getText();
-		System.out.println("Start Your session ");
+		System.out.println("Start Your ssession ");
 		String expStr = "Sign in to start your session";
 		Reports.test=Reports.extent.createTest("verifyloginsesion", "This test case validate to check session message on login page");
 		Assert.assertEquals(actStr, expStr);
