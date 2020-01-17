@@ -1,8 +1,6 @@
 package com.jbk.owp.test;
 
 import java.util.List;
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,7 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.dataprovider.StaticDataProvider;
-
 import com.jbk.owu.util.Reports;
 public class LoginPageTest extends TestBase {
 

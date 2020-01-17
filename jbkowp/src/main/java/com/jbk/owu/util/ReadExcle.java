@@ -13,6 +13,8 @@ import com.jbk.owp.base.TestBase;
 public class ReadExcle extends TestBase {
 	private static Workbook book;
 	private static Sheet sheet;
+	//private static String xlFilePath= "C:/Users/Subhash/git/jbkowp/jbkowp/src/test/resources/OwpTestData.xlsx";
+	private static String xlFilePath =  currentDir + "\\src\\test\\resources\\OwpTestData.xlsx";
 	public static Object[][] getDataFromXls(String sheetname) throws EncryptedDocumentException, InvalidFormatException {
 		FileInputStream file=null;
 		try
