@@ -1,6 +1,5 @@
 package com.jbk.owp.base;
 
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -37,9 +36,11 @@ public  class TestBase {
 	public static String uaturl = PropertyManager.getInstance().getUaturl();
 	public static String projectName = PropertyManager.getInstance().getProject();
 	public static String xlFilePath= "C:/Users/Subhash/git/jbkowp/jbkowp/src/test/resources/OwpTestData.xlsx";
+	public static String path = currentDir + "\\Reports\\" + timeStamp +"\\_OWUReport\\Screenshots\\";
 	@BeforeSuite
 	public void Setup(){
 		openBrowser();
+		
 		Reporter.log("=====Application Started ========",true);
 		driver.get(qaurl);
 		Reports.startReport();

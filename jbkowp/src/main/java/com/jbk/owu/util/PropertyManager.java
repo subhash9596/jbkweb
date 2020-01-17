@@ -5,7 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertyManager {
+import com.jbk.owp.base.TestBase;
+
+public class PropertyManager extends TestBase {
 
 	private static PropertyManager instance;
     private static final Object lock = new Object();
