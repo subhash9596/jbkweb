@@ -11,7 +11,7 @@ import com.jbk.owp.base.TestBase;
 
 public class Screenshot extends TestBase{	
 	
-	public static String path = currentDir + "\\Reports\\" + timeStamp +"\\_OwpReport\\";
+	public static String path = currentDir + "\\Reports\\" + timeStamp +"\\_OWUReport\\Screenshots\\";
 		
 	public static String getScreenshot(WebDriver driver, String name) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;

@@ -11,7 +11,7 @@
       <![CDATA[===== Browser Session End  ========]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3222" started-at="2020-01-17T04:36:07Z" finished-at="2020-01-17T04:36:10Z">
+  <suite name="Default suite" duration-ms="7262" started-at="2020-01-17T08:02:57Z" finished-at="2020-01-17T08:03:05Z">
     <groups>
       <group name="Regression">
         <method signature="LoginPageTest.Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="Login" class="com.jbk.owp.test.LoginPageTest"/>
@@ -25,9 +25,9 @@
         <method signature="LoginPageTest.verifyloginsesion()[pri:13, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyloginsesion" class="com.jbk.owp.test.LoginPageTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="3222" started-at="2020-01-17T04:36:07Z" finished-at="2020-01-17T04:36:10Z">
+    <test name="Default test" duration-ms="7262" started-at="2020-01-17T08:02:57Z" finished-at="2020-01-17T08:03:05Z">
       <class name="com.jbk.owp.test.LoginPageTest">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="Setup" is-config="true" duration-ms="9808" started-at="2020-01-17T04:35:57Z" finished-at="2020-01-17T04:36:07Z">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="Setup" is-config="true" duration-ms="27040" started-at="2020-01-17T08:02:30Z" finished-at="2020-01-17T08:02:57Z">
           <reporter-output>
             <line>
               <![CDATA[Test is Starting]]>
@@ -37,11 +37,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="verifyUrl()[pri:10, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyUrl" duration-ms="20" started-at="2020-01-17T04:36:07Z" finished-at="2020-01-17T04:36:07Z">
+        <test-method status="PASS" signature="verifyUrl()[pri:10, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyUrl" duration-ms="112" started-at="2020-01-17T08:02:57Z" finished-at="2020-01-17T08:02:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUrl -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="382" started-at="2020-01-17T04:36:07Z" finished-at="2020-01-17T04:36:07Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="1036" started-at="2020-01-17T08:02:58Z" finished-at="2020-01-17T08:02:59Z">
           <params>
             <param index="0">
               <value>
@@ -52,11 +52,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyApplicationTitle()[pri:11, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyApplicationTitle" duration-ms="6" started-at="2020-01-17T04:36:07Z" finished-at="2020-01-17T04:36:07Z">
+        <test-method status="PASS" signature="verifyApplicationTitle()[pri:11, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyApplicationTitle" duration-ms="8" started-at="2020-01-17T08:02:59Z" finished-at="2020-01-17T08:02:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyApplicationTitle -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="92" started-at="2020-01-17T04:36:07Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="106" started-at="2020-01-17T08:02:59Z" finished-at="2020-01-17T08:02:59Z">
           <params>
             <param index="0">
               <value>
@@ -67,7 +67,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="FAIL" signature="verifyTitle()[pri:12, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyTitle" duration-ms="24" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="FAIL" signature="verifyTitle()[pri:12, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyTitle" duration-ms="92" started-at="2020-01-17T08:02:59Z" finished-at="2020-01-17T08:02:59Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Java By subhash] but found [Java By Kiran]]]>
@@ -112,7 +112,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitle -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="194" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="469" started-at="2020-01-17T08:02:59Z" finished-at="2020-01-17T08:02:59Z">
           <params>
             <param index="0">
               <value>
@@ -123,11 +123,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyloginsesion()[pri:13, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyloginsesion" duration-ms="23" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="verifyloginsesion()[pri:13, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyloginsesion" duration-ms="18" started-at="2020-01-17T08:02:59Z" finished-at="2020-01-17T08:02:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyloginsesion -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="86" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="91" started-at="2020-01-17T08:02:59Z" finished-at="2020-01-17T08:02:59Z">
           <params>
             <param index="0">
               <value>
@@ -138,11 +138,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyPlaceHolderUsername()[pri:14, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyPlaceHolderUsername" duration-ms="39" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="verifyPlaceHolderUsername()[pri:14, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyPlaceHolderUsername" duration-ms="58" started-at="2020-01-17T08:02:59Z" finished-at="2020-01-17T08:02:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPlaceHolderUsername -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="63" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="78" started-at="2020-01-17T08:02:59Z" finished-at="2020-01-17T08:03:00Z">
           <params>
             <param index="0">
               <value>
@@ -153,11 +153,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyPlaceHolderPassword()[pri:15, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyPlaceHolderPassword" duration-ms="22" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="verifyPlaceHolderPassword()[pri:15, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyPlaceHolderPassword" duration-ms="30" started-at="2020-01-17T08:03:00Z" finished-at="2020-01-17T08:03:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyPlaceHolderPassword -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="74" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="70" started-at="2020-01-17T08:03:00Z" finished-at="2020-01-17T08:03:00Z">
           <params>
             <param index="0">
               <value>
@@ -168,11 +168,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyButtoncolor()[pri:16, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyButtoncolor" duration-ms="155" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="verifyButtoncolor()[pri:16, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyButtoncolor" duration-ms="266" started-at="2020-01-17T08:03:00Z" finished-at="2020-01-17T08:03:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyButtoncolor -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="108" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="68" started-at="2020-01-17T08:03:00Z" finished-at="2020-01-17T08:03:00Z">
           <params>
             <param index="0">
               <value>
@@ -183,11 +183,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="verifyLinks()[pri:17, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyLinks" duration-ms="27" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="verifyLinks()[pri:17, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="verifyLinks" duration-ms="104" started-at="2020-01-17T08:03:00Z" finished-at="2020-01-17T08:03:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLinks -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="79" started-at="2020-01-17T04:36:08Z" finished-at="2020-01-17T04:36:08Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="90" started-at="2020-01-17T08:03:00Z" finished-at="2020-01-17T08:03:00Z">
           <params>
             <param index="0">
               <value>
@@ -198,7 +198,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="Login" duration-ms="320" started-at="2020-01-17T04:36:09Z" data-provider="d_login" finished-at="2020-01-17T04:36:09Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="Login" duration-ms="716" started-at="2020-01-17T08:03:03Z" data-provider="d_login" finished-at="2020-01-17T08:03:04Z">
           <params>
             <param index="0">
               <value>
@@ -229,7 +229,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="70" started-at="2020-01-17T04:36:09Z" finished-at="2020-01-17T04:36:09Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="71" started-at="2020-01-17T08:03:04Z" finished-at="2020-01-17T08:03:04Z">
           <params>
             <param index="0">
               <value>
@@ -240,7 +240,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="Login" duration-ms="333" started-at="2020-01-17T04:36:09Z" data-provider="d_login" finished-at="2020-01-17T04:36:10Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="Login" duration-ms="413" started-at="2020-01-17T08:03:04Z" data-provider="d_login" finished-at="2020-01-17T08:03:04Z">
           <params>
             <param index="0">
               <value>
@@ -271,7 +271,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="111" started-at="2020-01-17T04:36:10Z" finished-at="2020-01-17T04:36:10Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="108" started-at="2020-01-17T08:03:04Z" finished-at="2020-01-17T08:03:04Z">
           <params>
             <param index="0">
               <value>
@@ -282,7 +282,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="Login" duration-ms="307" started-at="2020-01-17T04:36:10Z" data-provider="d_login" finished-at="2020-01-17T04:36:10Z">
+        <test-method status="PASS" signature="Login(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:18, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="Login" duration-ms="328" started-at="2020-01-17T08:03:04Z" data-provider="d_login" finished-at="2020-01-17T08:03:04Z">
           <params>
             <param index="0">
               <value>
@@ -313,7 +313,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="72" started-at="2020-01-17T04:36:10Z" finished-at="2020-01-17T04:36:10Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="getResult" is-config="true" duration-ms="111" started-at="2020-01-17T08:03:04Z" finished-at="2020-01-17T08:03:05Z">
           <params>
             <param index="0">
               <value>
@@ -324,7 +324,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="CloseApplication()[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="CloseApplication" is-config="true" duration-ms="7368" started-at="2020-01-17T04:36:10Z" finished-at="2020-01-17T04:36:18Z">
+        <test-method status="PASS" signature="CloseApplication()[pri:0, instance:com.jbk.owp.test.LoginPageTest@22a67b4]" name="CloseApplication" is-config="true" duration-ms="7766" started-at="2020-01-17T08:03:05Z" finished-at="2020-01-17T08:03:13Z">
           <reporter-output>
             <line>
               <![CDATA[===== Browser Session End  ========]]>
