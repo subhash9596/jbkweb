@@ -3,10 +3,15 @@ package com.jbk.owp.base;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
@@ -14,18 +19,15 @@ import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.jbk.owu.util.Configuration;
 import com.jbk.owu.util.PropertyManager;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Screenshot;
 public  class TestBase {
-	public static String timeStamp = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+	public static String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mmss").format(new Date());
 	public static String currentDir = System.getProperty("user.dir");
 	Configuration getURL = new Configuration();
 	public static WebDriver  driver;
@@ -35,13 +37,11 @@ public  class TestBase {
 	public static String qaurl = PropertyManager.getInstance().getQaurl();
 	public static String uaturl = PropertyManager.getInstance().getUaturl();
 	public static String projectName = PropertyManager.getInstance().getProject();
-	
-	
 	@BeforeSuite
 	public void Setup(){
 		openBrowser();
 		Reporter.log("=====Application Started ========",true);
-		driver.get(qaurl);
+		//driver.get(qaurl);
 		Reports.startReport();
 	}
 	public static WebDriver openBrowser(){
@@ -51,7 +51,13 @@ public  class TestBase {
 		if (browserName.equalsIgnoreCase("firefox")) {
 			String browser_path ="lib/Geckodriver/geckodriver.exe";
 			System.setProperty("webdriver.gecko.driver", browser_path);
-			driver = new FirefoxDriver();
+			FirefoxOptions options = new FirefoxOptions();
+			FirefoxProfile profile = new FirefoxProfile();
+			profile.setAcceptUntrustedCertificates(true);
+			profile.setAssumeUntrustedCertificateIssuer(false);
+			profile.setPreference("network.proxy.type", 0);
+			options.setCapability(FirefoxDriver.PROFILE, profile);
+			driver = new FirefoxDriver(options);
 		} else if (browserName.equalsIgnoreCase("chrome")) {
 			String browser_path ="lib/Chromedriver/chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver","chromedriver.exe");
@@ -74,60 +80,22 @@ public  class TestBase {
 			System.setProperty("webdriver.ie.driver", browser_path);
 			driver = new InternetExplorerDriver();
 		}
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get(qaurl);
+		driver.manage().deleteAllCookies();
+	  	driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+	  	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;
-	
+
+		
+		
 	}
 	@AfterSuite
 	public void CloseApplication(){
 		driver.quit();
 		Reporter.log("===== Browser Session End  ========",true);
 	}	
-		//This is my old code
-//        String browsername = browser;
-//        System.out.println("Started");
-//    	Reporter.log("=====Test is Starting========",true);
-//		if(browsername.equalsIgnoreCase("firefox")){
-//			
-//			driver = new FirefoxDriver();
-//		} else if (browser.equals("Chrome")) {
-//
-//			driver=new ChromeDriver();
-//		}else{
-//			System.out.println("Browser not found ");
-//		}
-//
-//		driver.manage().window().maximize(); // Maximize the window 
-//		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-//		driver.get(qaurl);
-//		System.out.println("QA URL >>>"+qaurl);
-//		Reporter.log("=====Application Started ========",true);
-//		return driver;		
-//	}
-	
 
-	//Report Generate 
-//	@BeforeSuite
-//	public void setUp() {
-//		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/extendReport.html");
-//		extend = new ExtentReports();
-//		extend.attachReporter(htmlReporter);
-//	}
-//	@AfterMethod
-//	public void getResult(ITestResult result){
-//		if(result.getStatus()==ITestResult.FAILURE){
-//			logger.fail(MarkupHelper.createLabel(result.getName()+"  Test Case Failed", ExtentColor.RED));
-//		  logger.fail(result.getThrowable());
-//		}else if (result.getStatus()==ITestResult.SUCCESS){
-//			logger.pass(MarkupHelper.createLabel(result.getName()+"  Test Case Passed", ExtentColor.GREEN));	
-//		}else
-//		{
-//			logger.skip(MarkupHelper.createLabel(result.getName()+"  Test Case Skiped", ExtentColor.YELLOW));
-//			logger.skip(result.getThrowable());
-//		}
-//	}
-//	
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception {
 		if (result.getStatus() == ITestResult.FAILURE) {
@@ -142,23 +110,35 @@ public  class TestBase {
 			Reports.test.skip(result.getThrowable());
 		}Reports.extent.flush();
 	}
-//	@AfterSuite
-//	public void tearDown1(){
-//		Reports.extent.flush();
-//	}   
-	
 	//Selenium methods
-	
+
 	// This method can Redirects or Navigate to particular URL
-		public static void get(String url) throws Exception {
-			try {
-				if (url != null) {
-					driver.get(url);
-				}
-			} catch (Exception e) {
-				System.out.println("invaid URL pleaes check ");
+	public static void get(String url) throws Exception {
+		try {
+			if (url != null) {
+				driver.get(url);
 			}
+		} catch (Exception e) {
+			System.out.println("invaid URL pleaes check ");
+		}
+		}
+	
+	public static boolean isDisplayed(WebElement element) throws Exception {
+		boolean visible;
+		try {
+			element.isDisplayed();
+			((JavascriptExecutor) driver).executeScript("arguments[0].style.border='2px solid green'", element);
+			visible = true;
+		} catch (Exception e) {
+			visible = false;
+		}
+		return visible;
+	}
+	public static void click(WebElement element ) throws Exception{
+		if(isDisplayed(element)==true){
+			element.click();
 		}
 		
-}
+	}
+	}
 

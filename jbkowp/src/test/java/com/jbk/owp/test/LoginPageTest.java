@@ -110,6 +110,7 @@ public class LoginPageTest extends TestBase {
 		driver.findElement(By.xpath("//input[@id='password']")).clear();
 		driver.findElement(By.xpath("//input[@id='password']")).sendKeys(Password);
 		driver.findElement(By.xpath("//*[@id='form']/div[3]/div/button")).click();	
+		
 
 		if(tcDescription.equals("Withblankdinfo")){
 			String actResult= driver.findElement(By.xpath("//*[@id='email_error']")).getText();
