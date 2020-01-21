@@ -38,6 +38,9 @@ public  class TestBase {
 	public static String qaurl = PropertyManager.getInstance().getQaurl();
 	public static String uaturl = PropertyManager.getInstance().getUaturl();
 	public static String projectName = PropertyManager.getInstance().getProject();
+	public static String report = PropertyManager.getInstance().getReport();
+	public static String screenshot = PropertyManager.getInstance().getScreenshot();
+	//public static String report = "Y";
 	@BeforeSuite
 	public void Setup(){
 		openBrowser();
@@ -85,10 +88,7 @@ public  class TestBase {
 	  	driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
 	  	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		return driver;
-
-		
-		
+		return driver;		
 	}
 	@AfterSuite
 	public void CloseApplication(){
@@ -98,17 +98,21 @@ public  class TestBase {
 
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception {
-		if (result.getStatus() == ITestResult.FAILURE) {
-			Reports.test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() +" Test Case Failed ", ExtentColor.RED));
-			Reports.test.fail(result.getThrowable());
-			String screenshotpath=Screenshot.getScreenshot(driver,result.getName());
-			Reports.test.addScreenCaptureFromPath(screenshotpath);//add screenshot in report
-		} else if (result.getStatus() == ITestResult.SUCCESS) {
-			Reports.test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+"Test Case Passsed",ExtentColor.GREEN));
-		} else {
-			Reports.test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() +" Test Case Skip ", ExtentColor.ORANGE));
-			Reports.test.skip(result.getThrowable());
-		}Reports.extent.flush();
+		if(report.equals("Y")){
+			if (result.getStatus() == ITestResult.FAILURE) {
+				Reports.test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() +" Test Case Failed ", ExtentColor.RED));
+				Reports.test.fail(result.getThrowable());
+				String screenshotpath=Screenshot.getScreenshot(driver,result.getName());
+				Reports.test.addScreenCaptureFromPath(screenshotpath);//add screenshot in report
+			} else if (result.getStatus() == ITestResult.SUCCESS) {
+				Reports.test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+"Test Case Passsed",ExtentColor.GREEN));
+			} else {
+				Reports.test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() +" Test Case Skip ", ExtentColor.ORANGE));
+				Reports.test.skip(result.getThrowable());
+			}Reports.extent.flush();
+			
+		}
+		
 	}
 	//Selenium methods
 

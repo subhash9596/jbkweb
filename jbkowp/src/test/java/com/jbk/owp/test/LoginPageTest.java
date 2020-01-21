@@ -2,7 +2,6 @@ package com.jbk.owp.test;
 
 import java.io.IOException;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,15 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.dataprovider.StaticDataProvider;
-
 import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.RegisterPage;
 import com.jbk.owu.util.Reports;
-
-import sun.util.logging.resources.logging_zh_CN;
 
 public class LoginPageTest extends TestBase{
 	RegisterPage Resisterpage;

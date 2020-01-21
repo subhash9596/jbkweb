@@ -21,8 +21,9 @@ public class PropertyManager extends TestBase {
     private static String project;
     private static String email;
     private static String suite;
-
-    public static PropertyManager getInstance () {
+    private static String report;
+    private static String screenshot;
+	public static PropertyManager getInstance () {
         if (instance == null) {
             synchronized (lock) {
                 instance = new PropertyManager();
@@ -54,12 +55,21 @@ public class PropertyManager extends TestBase {
         project = prop.getProperty("project");
         email = prop.getProperty("email");
         suite = prop.getProperty("suite");
+        report = prop.getProperty("report");
+        screenshot = prop.getProperty("screenshot");
+        
     }
 
+	public static String getScreenshot() {
+		return screenshot;
+	}
+
+	public static Object getLock() {
+		return lock;
+	}
 	public static String getQaurl() {
 		return qaurl;
 	}
-	
 	public static String getUaturl() {
 		return uaturl;
 	}
@@ -90,6 +100,9 @@ public class PropertyManager extends TestBase {
 	
 	public static String getSuite() {
 		return suite;
+	}
+	public static String getReport() {
+		return report;
 	}
  
     }
