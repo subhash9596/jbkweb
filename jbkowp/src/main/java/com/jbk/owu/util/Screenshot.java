@@ -23,7 +23,8 @@ public class Screenshot extends TestBase{
 		FileUtils.copyFile(source, finalDestination);
 		return destination;
 	}
-}
+
+
 //	public static void CreateDirectory(String DirectoryName)
 //	{
 //		//project directory
@@ -38,5 +39,5 @@ public class Screenshot extends TestBase{
 //			System.out.println("Directory is already exist!");
 //		}
 //	}
-//
-//}
+
+	}

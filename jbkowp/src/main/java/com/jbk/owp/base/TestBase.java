@@ -26,6 +26,7 @@ import com.jbk.owu.util.Configuration;
 import com.jbk.owu.util.PropertyManager;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Screenshot;
+
 public  class TestBase {
 	public static String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mmss").format(new Date());
 	public static String currentDir = System.getProperty("user.dir");
@@ -41,7 +42,6 @@ public  class TestBase {
 	public void Setup(){
 		openBrowser();
 		Reporter.log("=====Application Started ========",true);
-		//driver.get(qaurl);
 		Reports.startReport();
 	}
 	public static WebDriver openBrowser(){

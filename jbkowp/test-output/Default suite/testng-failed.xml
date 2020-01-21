@@ -3,22 +3,47 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jbk.owp.test.LoginPageTest">
+      <class name="com.jbk.owp.test.DashboardTest">
         <methods>
+          <include name="moveover_Dashboard_Bgcolor"/>
+          <include name="jbk_Main_Heading_Spell_check"/>
+          <include name="jbk_subHeading_link"/>
+          <include name="jbk_text_logo_isdisplayed"/>
+          <include name="moveover_Oprators_Bgcolor"/>
+          <include name="dashboard_Fotter_Spell"/>
+          <include name="selenium_Course_Spell"/>
+          <include name="downloads_Navigation_Spelling_Check"/>
+          <include name="automationtest_spell"/>
+          <include name="user_Navigation_spell_Check"/>
+          <include name="downloads_Navigation_link_Check"/>
           <include name="getResult"/>
-          <include name="verifyPlaceHolderUsername"/>
+          <include name="Dashboard_Navigation_link_Check"/>
+          <include name="useful_Links_spell_Check"/>
           <include name="CloseApplication"/>
-          <include name="verifyPlaceHolderPassword"/>
+          <include name="Dashboard_Main_Heading_Text_Check"/>
+          <include name="dashboard_Main_Heading_Spell"/>
+          <include name="usefullinks_Navaigation_isdisplayed"/>
+          <include name="user_Navigation_link_Check"/>
+          <include name="oprators_Navigation_link_Check"/>
+          <include name="usefulLinks_navigation_link_Check"/>
+          <include name="downloads_navigation_isdisplayed"/>
+          <include name="User_Navigation_isdisplayed_Check"/>
+          <include name="moveover_User_Bgcolor"/>
+          <include name="operators_Navigation_isdisplayed"/>
           <include name="Setup"/>
-          <include name="verifyButtoncolor"/>
-          <include name="verifyloginsesion"/>
-          <include name="Login"/>
-          <include name="verifyApplicationTitle"/>
-          <include name="verifyTitle"/>
-          <include name="verifyLinks"/>
-          <include name="verifyUrl"/>
+          <include name="moveover_UsefulLinks_Bgcolor"/>
+          <include name="oprators_Navigation_spell_Check"/>
+          <include name="pullright_Heading_spell"/>
+          <include name="main_Navigation_Tab_Text_Check"/>
+          <include name="moveover_Logout_Bgcolor"/>
+          <include name="moveover_downloads_Bgcolor"/>
+          <include name="user_img_isdisplayed"/>
+          <include name="logouttabisdisplayed"/>
+          <include name="sidebar_Menu_Navigations_Count"/>
+          <include name="setupTest"/>
+          <include name="logout_Navigation_Spelling_Check"/>
         </methods>
-      </class> <!-- com.jbk.owp.test.LoginPageTest -->
+      </class> <!-- com.jbk.owp.test.DashboardTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

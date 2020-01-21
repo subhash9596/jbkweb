@@ -14,4 +14,9 @@ public class StaticDataProvider extends TestBase {
 		Object[][] testdata =ReadExcle.getDataFromXls("Login");
 		return testdata;
 }
+	@DataProvider(name = "d_Register")
+	public Object[][] RegisterData() throws EncryptedDocumentException, InvalidFormatException {
+		Object[][] testdata =ReadExcle.getDataFromXls("Registration");
+		return testdata;
+}
 }

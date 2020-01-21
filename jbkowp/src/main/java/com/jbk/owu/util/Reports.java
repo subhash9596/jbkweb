@@ -11,7 +11,8 @@ public class Reports extends TestBase {
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extent;
 	public static ExtentTest test;
-    public static String reportPath = currentDir + "\\Reports\\" +"OWPReport.html"+timeStamp;
+    public static String reportPath = currentDir + "\\Reports\\" +"_OWUReport"+timeStamp;
+   // private static String path = currentDir + "\\Reports\\" + timeStamp +"\\_OWUReport\\Screenshots\\";
 	public static void startReport()
 	{
 		htmlReporter = new ExtentHtmlReporter(reportPath);
