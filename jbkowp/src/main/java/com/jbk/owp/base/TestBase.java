@@ -1,9 +1,9 @@
 package com.jbk.owp.base;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,11 +23,14 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.jbk.owu.util.Configuration;
+import com.jbk.owu.util.Log4j;
 import com.jbk.owu.util.PropertyManager;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Screenshot;
+import com.jbk.owu.util.Retry;
 
 public  class TestBase {
+	public static Logger logger = LogManager.getLogger(TestBase.class);
 	public static String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mmss").format(new Date());
 	public static String currentDir = System.getProperty("user.dir");
 	Configuration getURL = new Configuration();
@@ -50,7 +53,7 @@ public  class TestBase {
 	public static WebDriver openBrowser(){
 		String browserName = browser;
 		System.out.println("Started");
-		Reporter.log("Test is Starting");
+		logger.info("Testign is Started");
 		if (browserName.equalsIgnoreCase("firefox")) {
 			String browser_path ="lib/Geckodriver/geckodriver.exe";
 			System.setProperty("webdriver.gecko.driver", browser_path);
@@ -93,7 +96,7 @@ public  class TestBase {
 	@AfterSuite
 	public void CloseApplication(){
 		driver.quit();
-		Reporter.log("===== Browser Session End  ========",true);
+		logger.info("Testign is Ended ");
 	}	
 
 	@AfterMethod

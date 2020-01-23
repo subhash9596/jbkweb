@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.jbk.owp.test.LoginPageTest">
@@ -12,18 +12,6 @@
           <include name="setupTest"/>
         </methods>
       </class> <!-- com.jbk.owp.test.LoginPageTest -->
-      <class name="com.jbk.owp.test.DashboardPageTest">
-        <methods>
-          <include name="getResult"/>
-          <include name="CloseApplication"/>
-          <include name="Setup"/>
-          <include name="moveover_downloads_Bgcolor"/>
-          <include name="moveover_Oprators_Bgcolor"/>
-          <include name="moveover_User_Bgcolor"/>
-          <include name="moveover_UsefulLinks_Bgcolor"/>
-          <include name="setupTest"/>
-        </methods>
-      </class> <!-- com.jbk.owp.test.DashboardPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+</suite> <!-- Failed suite [Default suite] -->

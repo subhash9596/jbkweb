@@ -9,11 +9,9 @@ import org.apache.commons.io.FileUtils;
 import com.jbk.owp.base.TestBase;
 
 public class Screenshot extends TestBase{	
-	public static  String CONFIG = "Y";
 	private static String path = currentDir + "\\Reports\\" + timeStamp +"\\_OWUReport\\Screenshots\\";
 	public static String getScreenshot(WebDriver driver, String name) throws IOException {
-		String screen = screenshot;
-		if(CONFIG.equals("Y")){
+		if(screenshot.equals("Y")){
 			TakesScreenshot ts = (TakesScreenshot) driver;
 			File source = ts.getScreenshotAs(OutputType.FILE);
 			String destination=path+name+"_Fail.png";
@@ -21,7 +19,7 @@ public class Screenshot extends TestBase{
 			FileUtils.copyFile(source, finalDestination);
 			return destination;	
 		}
-		return CONFIG;				
+		return screenshot;				
 	}
 
 
