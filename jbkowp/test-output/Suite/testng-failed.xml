@@ -3,15 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jbk.owp.test.LoginPageTest">
-        <methods>
-          <include name="getResult"/>
-          <include name="CloseApplication"/>
-          <include name="Setup"/>
-          <include name="verifyTitle"/>
-          <include name="setupTest"/>
-        </methods>
-      </class> <!-- com.jbk.owp.test.LoginPageTest -->
       <class name="com.jbk.owp.test.DashboardPageTest">
         <methods>
           <include name="getResult"/>
@@ -21,9 +12,19 @@
           <include name="moveover_Oprators_Bgcolor"/>
           <include name="moveover_User_Bgcolor"/>
           <include name="moveover_UsefulLinks_Bgcolor"/>
+          <include name="moveover_Logout_Bgcolor"/>
           <include name="setupTest"/>
         </methods>
       </class> <!-- com.jbk.owp.test.DashboardPageTest -->
+      <class name="com.jbk.owp.test.LoginPageTest">
+        <methods>
+          <include name="getResult"/>
+          <include name="CloseApplication"/>
+          <include name="Setup"/>
+          <include name="verifyTitle"/>
+          <include name="setupTest"/>
+        </methods>
+      </class> <!-- com.jbk.owp.test.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

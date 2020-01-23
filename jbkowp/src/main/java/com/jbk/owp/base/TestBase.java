@@ -28,6 +28,7 @@ import com.jbk.owu.util.PropertyManager;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Screenshot;
 import com.jbk.owu.util.Retry;
+import com.jbk.owu.util.SendEmail;
 
 public  class TestBase {
 	public static Logger logger = LogManager.getLogger(TestBase.class);
@@ -43,6 +44,7 @@ public  class TestBase {
 	public static String projectName = PropertyManager.getInstance().getProject();
 	public static String report = PropertyManager.getInstance().getReport();
 	public static String screenshot = PropertyManager.getInstance().getScreenshot();
+	public static String sendemail=PropertyManager.getInstance().getSendemail();
 	//public static String report = "Y";
 	@BeforeSuite
 	public void Setup(){
@@ -53,7 +55,7 @@ public  class TestBase {
 	public static WebDriver openBrowser(){
 		String browserName = browser;
 		System.out.println("Started");
-		logger.info("Testign is Started");
+		logger.info("Testing is Started");
 		if (browserName.equalsIgnoreCase("firefox")) {
 			String browser_path ="lib/Geckodriver/geckodriver.exe";
 			System.setProperty("webdriver.gecko.driver", browser_path);
@@ -94,9 +96,12 @@ public  class TestBase {
 		return driver;		
 	}
 	@AfterSuite
-	public void CloseApplication(){
-		driver.quit();
-		logger.info("Testign is Ended ");
+	public void CloseApplication() throws Exception{
+		logger.info("Testing is Ended ");
+		driver.quit();	
+		if(sendemail.equals("Y")){
+			SendEmail.execute(projectName+ ".html");
+		}
 	}	
 
 	@AfterMethod

@@ -23,6 +23,7 @@ public class PropertyManager extends TestBase {
     private static String suite;
     private static String report;
     private static String screenshot;
+    private static String sendemail;
 	public static PropertyManager getInstance () {
         if (instance == null) {
             synchronized (lock) {
@@ -57,6 +58,7 @@ public class PropertyManager extends TestBase {
         suite = prop.getProperty("suite");
         report = prop.getProperty("report");
         screenshot = prop.getProperty("screenshot");
+        sendemail = prop.getProperty("sendemail");
         
     }
 
@@ -104,6 +106,11 @@ public class PropertyManager extends TestBase {
 	public static String getReport() {
 		return report;
 	}
+
+	public static String getSendemail() {
+		return sendemail;
+	}
+	
  
     }
     

@@ -9,22 +9,22 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.dataprovider.StaticDataProvider;
 import com.jbk.owu.page.RegisterPage;
+import com.jbk.owu.util.ItestListner;
 import com.jbk.owu.util.Reports;
 
-
+@Listeners(ItestListner.class)
 public class RegisterMemberPageTest extends TestBase {
 	//Class Object
-	
-	
 	@BeforeMethod
 	public void setupTest() throws IOException
 	{
-		RegisterPage Rpage = new RegisterPage();
+		RegisterPage resisterpage = new RegisterPage();
 		PageFactory.initElements(driver, RegisterPage.class);
 	}
 

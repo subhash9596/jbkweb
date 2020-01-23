@@ -10,16 +10,18 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.RegisterPage;
+import com.jbk.owu.util.ItestListner;
 import com.jbk.owu.util.Reports;
-
+@Listeners(ItestListner.class)
 public class DashboardPageTest extends TestBase {
-
+ 
 	RegisterPage Resisterpage;
 	LoginPage loginpage;
 
