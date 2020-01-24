@@ -8,9 +8,10 @@ import org.openqa.selenium.WebDriver;
 import org.apache.commons.io.FileUtils;
 import com.jbk.owp.base.TestBase;
 
+
 public class Screenshot extends TestBase{	
-	private static String path = currentDir + "\\Reports\\" + timeStamp +"\\_OWUReport\\Screenshots\\";
-	public static String getScreenshot(WebDriver driver, String name) throws IOException {
+	private static String path = currentDir + "\\Reports\\" + timeStamp +"_OWPReport\\Screenshots\\";
+	public static String getScreenshot(WebDriver driver,String name) throws IOException {
 		if(screenshot.equals("Y")){
 			TakesScreenshot ts = (TakesScreenshot) driver;
 			File source = ts.getScreenshotAs(OutputType.FILE);
@@ -21,8 +22,6 @@ public class Screenshot extends TestBase{
 		}
 		return screenshot;				
 	}
-
-
 //	public static void CreateDirectory(String DirectoryName)
 //	{
 //		//project directory

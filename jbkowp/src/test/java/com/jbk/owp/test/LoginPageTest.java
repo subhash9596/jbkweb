@@ -18,11 +18,12 @@ import com.jbk.owu.util.ItestListner;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
 
+
 @Listeners(ItestListner.class)
 public class LoginPageTest extends TestBase{
 	RegisterPage Resisterpage;
 	LoginPage loginpage;
-	
+
 	@BeforeMethod
 	public void setupTest() throws IOException
 	{
@@ -30,13 +31,13 @@ public class LoginPageTest extends TestBase{
 		PageFactory.initElements(driver, LoginPage.class);
 	}
 	@Test(priority=1,groups="Regression",retryAnalyzer = Retry.class)
-	public void verifyUrl() throws Exception{
-		Assert.assertEquals(driver.getCurrentUrl(), "file:///E:/Offline%20Website/index.html");
+	public void verify_Current_Url() throws Exception{
+		Assert.assertEquals(getcurrentURL(), "file:///E:/Offline%20Website/index.html");
 		Reports.test=Reports.extent.createTest("verifyUrl", "This test case validate to check URL of offlien application");	
 	}
 	@Test(priority=2,groups="Regression",retryAnalyzer = Retry.class)
-	public void verifyApplicationTitle(){
-		Assert.assertEquals(driver.getTitle(), "JavaByKiran | Log in");
+	public void verifyApplicationTitle() throws Exception{
+		Assert.assertEquals(getTitle(), "JavaByKiran | Log in");
 		Reports.test=Reports.extent.createTest("verifyApplicationTitle", "This test case validate to check Title of offline application");
 	}
 	@Test(priority=3,groups="Regression",retryAnalyzer = Retry.class)
@@ -79,31 +80,31 @@ public class LoginPageTest extends TestBase{
 			System.out.println("All the links avilabe >>>"+links.get(i).getText());
 		}
 	}
-		
-		@Test(priority=9,groups="Regression",dataProviderClass=StaticDataProvider.class,dataProvider = "d_login",retryAnalyzer = Retry.class)
-		public void Login(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
-			System.out.println("Test Case ID >>"+tcId);
-			System.out.println("Test Case ID >>"+tcDescription);
-			LoginPage.getEmail().clear();
-			LoginPage.getEmail().sendKeys(Username);
-			LoginPage.getPassword().clear();
-			LoginPage.getPassword().sendKeys(Password);
-			LoginPage.getButn_Signin().click();	
-	
-			if(tcDescription.equals("Withblankdinfo")){
-				Assert.assertEquals(LoginPage.getMsg_erroremail().getText(),expResult);
-				Reports.test=Reports.extent.createTest("LoginwithBlankInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
-			}else if(tcDescription.equals("InvalidInfo")){
-				Assert.assertEquals(LoginPage.getMsg_erroremail().getText(),expResult);
-				Reports.test=Reports.extent.createTest("LoginwithInvalidInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
-			}else if(tcDescription.equals("validInfo")){
-				//Assert.assertEquals(DashboardPage.getText_dashboard().getText(), expResult);
-				Reports.test=Reports.extent.createTest("LoginwithValidInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
-				
-			}
-			
+
+	@Test(priority=9,groups="Regression",dataProviderClass=StaticDataProvider.class,dataProvider = "d_login",retryAnalyzer = Retry.class)
+	public void Login(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
+		System.out.println("Test Case ID >>"+tcId);
+		System.out.println("Test Case ID >>"+tcDescription);
+		LoginPage.getEmail().clear();
+		LoginPage.getEmail().sendKeys(Username);
+		LoginPage.getPassword().clear();
+		LoginPage.getPassword().sendKeys(Password);
+		LoginPage.getButn_Signin().click();	
+
+		if(tcDescription.equals("Withblankdinfo")){
+			Assert.assertEquals(LoginPage.getMsg_erroremail().getText(),expResult);
+			Reports.test=Reports.extent.createTest("LoginwithBlankInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
+		}else if(tcDescription.equals("InvalidInfo")){
+			Assert.assertEquals(LoginPage.getMsg_erroremail().getText(),expResult);
+			Reports.test=Reports.extent.createTest("LoginwithInvalidInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
+		}else if(tcDescription.equals("validInfo")){
+			//Assert.assertEquals(DashboardPage.getText_dashboard().getText(), expResult);
+			Reports.test=Reports.extent.createTest("LoginwithValidInfo", "This test case validate to check login functionality with Blank , invalid and valid info");
+
 		}
-	
+
 	}
+
+}
 
 
