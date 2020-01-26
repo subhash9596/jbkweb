@@ -31,51 +31,50 @@ public class DashboardPageTest extends TestBase {
 		DashboardPagee dp= new DashboardPagee();
 		PageFactory.initElements(driver, DashboardPagee.class);
 	}
-
-	@Test(priority=10)
+	@Test(priority=1)
 	public void CheckMainNavigationText() {
 		Assert.assertEquals(DashboardPagee.mainnavigationtext().getText(), "MAIN NAVIGATION");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "Main Navigation Speeling Chec");
 		Reports.test.log(Status.INFO,"Main Navigation Speeling Check");
 	}	  	  
 
-	@Test(priority=11,description="Dashboard  Main Heading spell check")
+	@Test(priority=2,description="Dashboard  Main Heading spell check")
 	public void Dashboard_Main_Heading_Text_Check() {
 		Assert.assertEquals(DashboardPagee.dashboardmainheading().getText(), "Dashboard Courses Offered");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=12,description="Users Navigation Speeling Check")
+	@Test(priority=3,description="Users Navigation Speeling Check")
 	public void user_Navigation_spell_Check() {
 		Assert.assertEquals(DashboardPagee.usernavigationtext().getText(), "Users");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=13,description="Oprators Navigation Speeling Check")
+	@Test(priority=4,description="Oprators Navigation Speeling Check")
 	public void oprators_Navigation_spell_Check() {
 		Assert.assertEquals(DashboardPagee.operatorsnavigationtext().getText(), "Operators");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=14,description="Useful Links Navigation Speeling Check")
+	@Test(priority=5,description="Useful Links Navigation Speeling Check")
 	public void  useful_Links_spell_Check() {
 		Assert.assertEquals(DashboardPagee.usefullinksnavigationtext().getText(), "Useful Links");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");;
 	}
 
-	@Test(priority=15,description="Downloads Navigation Speeling Check")
+	@Test(priority=6,description="Downloads Navigation Speeling Check")
 	public void  downloads_Navigation_Spelling_Check() {
 		Assert.assertEquals(DashboardPagee.downloadsnavigationtext().getText(), "Downloads");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=16,description="Logout Navigation Speeling Check")
+	@Test(priority=7,description="Logout Navigation Speeling Check")
 	public void  logout_Navigation_Spelling_Check() {
 		Assert.assertEquals(DashboardPagee.logoutnavigationtext().getText(), "Logout");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=17,description="Dashboard Navigation link Check")
+	@Test(priority=8,description="Dashboard Navigation link Check")
 	public void Dashboard_Navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/dashboard.html";
 		try
@@ -87,7 +86,7 @@ public class DashboardPageTest extends TestBase {
 			System.out.println("Dashboard navigation link changed...");
 		}
 	}
-	@Test(priority=18,description="User Navigation link Check")
+	@Test(priority=9,description="User Navigation link Check")
 	public void user_Navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/users.html";
 		try
@@ -100,7 +99,7 @@ public class DashboardPageTest extends TestBase {
 		}
 	}
 
-	@Test(priority=19,description="Operators Navigation link Check")
+	@Test(priority=10,description="Operators Navigation link Check")
 	public void oprators_Navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/operators.html";
 		try
@@ -113,7 +112,7 @@ public class DashboardPageTest extends TestBase {
 		}
 	}
 
-	@Test(priority=20,description="Useful Links Navigation link Check")
+	@Test(priority=11,description="Useful Links Navigation link Check")
 	public void  usefulLinks_navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/links.html";
 		try
@@ -126,7 +125,7 @@ public class DashboardPageTest extends TestBase {
 		}
 	}
 
-	@Test(priority=21,description="Downloads Navigation link Check")
+	@Test(priority=12,description="Downloads Navigation link Check")
 	public void  downloads_Navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/downloads.html";
 		try
@@ -139,47 +138,47 @@ public class DashboardPageTest extends TestBase {
 		}
 	}
 
-	@Test(priority=22,description="Sidebar menu Navigations count")
+	@Test(priority=13,description="Sidebar menu Navigations count")
 	public void sidebar_Menu_Navigations_Count()
 	{
 		System.out.println("Sidebar menu Navigations count to be implemented.....");	
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=23,description="User Navigation Display check")
+	@Test(priority=14,description="User Navigation Display check")
 	public void User_Navigation_isdisplayed_Check() {
 		Assert.assertEquals(DashboardPagee.usefullinksnavigationisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
 
-	@Test(priority=24,description="Oprators Navigation Display check")
+	@Test(priority=15,description="Oprators Navigation Display check")
 	public void operators_Navigation_isdisplayed() {
 		//boolean evalue=true;
 		Assert.assertEquals(DashboardPagee.operatorsnavigationisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=25,description="Useful Links Navigation Display check")
+	@Test(priority=16,description="Useful Links Navigation Display check")
 	public void usefullinks_Navaigation_isdisplayed() {
 		Assert.assertEquals(DashboardPagee.usefullinksnavigationisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=26,description="Downloads  Navigation Display check")
+	@Test(priority=17,description="Downloads  Navigation Display check")
 	public void downloads_navigation_isdisplayed() {
 		Assert.assertEquals(DashboardPagee.downloadsnavigationisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=27,description="Logout Navigation Display check")
+	@Test(priority=18,description="Logout Navigation Display check")
 	public void logouttabisdisplayed() {
 		//boolean evalue=true;
 		Assert.assertEquals(DashboardPagee.logoutnavigationisdiplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=28,description="Moveover on Dashboard Navigation Bgcolor change checking")
+	@Test(priority=19,description="Moveover on Dashboard Navigation Bgcolor change checking")
 	public void moveover_Dashboard_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -191,7 +190,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=29,description="Moveover on User Navigation Bgcolor change checking")
+	@Test(priority=20,description="Moveover on User Navigation Bgcolor change checking")
 	public void moveover_User_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -204,7 +203,7 @@ public class DashboardPageTest extends TestBase {
 	}
 
 
-	@Test(priority=30,description="Moveover on Oprators Navigation Bgcolor change checking")
+	@Test(priority=21,description="Moveover on Oprators Navigation Bgcolor change checking")
 	public void moveover_Oprators_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -217,7 +216,7 @@ public class DashboardPageTest extends TestBase {
 	}
 
 
-	@Test(priority=31,description="Moveover on Useful Navigation Bgcolor change checking")
+	@Test(priority=22,description="Moveover on Useful Navigation Bgcolor change checking")
 	public void moveover_UsefulLinks_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -229,7 +228,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading"); 	
 	}
 
-	@Test(priority=32,description="Moveover on Downlaods Navigation Bgcolor change checking")
+	@Test(priority=23,description="Moveover on Downlaods Navigation Bgcolor change checking")
 	public void moveover_downloads_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -241,7 +240,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");	
 	}
 
-	@Test(priority=33,description="Moveover on Logout Navigation Bgcolor change checking")
+	@Test(priority=24,description="Moveover on Logout Navigation Bgcolor change checking")
 	public void moveover_Logout_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -253,7 +252,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=34,description="JBK Main Heading Spell Check ")
+	@Test(priority=25,description="JBK Main Heading Spell Check ")
 	public void jbk_Main_Heading_Spell_check()
 	{
 		String etext="Java By Kiran";	
@@ -261,7 +260,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=35,description="JBK subHedding link Check ")
+	@Test(priority=26,description="JBK subHedding link Check ")
 	public void jbk_subHeading_link()
 	{
 		String aurl=DashboardPagee.jbksubheadinglink();
@@ -270,21 +269,21 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=36,description="JBK  text Logo display check ")
+	@Test(priority=27,description="JBK  text Logo display check ")
 	public void jbk_text_logo_isdisplayed()
 	{
 		Assert.assertEquals(DashboardPagee.jbktextlogoisdisplayed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=37,description="User Image display check ")
+	@Test(priority=28,description="User Image display check ")
 	public void user_img_isdisplayed()
 	{
 		Assert.assertEquals(DashboardPagee.userimgisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=38,description="Dashboard Main Head speeling check ")
+	@Test(priority=29,description="Dashboard Main Head speeling check ")
 	public void dashboard_Main_Heading_Spell()
 	{
 		String evalue="Dashboard Courses Offered";	
@@ -292,7 +291,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=39,description="Dashboard fottor speeling check ")
+	@Test(priority=30,description="Dashboard fottor speeling check ")
 	public void dashboard_Fotter_Spell()
 	{
 		String evalue="Copyright © 2005-2019 JavaByKiran.";	
@@ -300,7 +299,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=40,description="Pull right heading speeling check ")
+	@Test(priority=31,description="Pull right heading speeling check ")
 	public void pullright_Heading_spell()
 	{
 		String evalue="Design for Selenium Automation Test V 2.3.0";	
@@ -308,26 +307,26 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=41,description="Selenium course information speeling check ")
+	@Test(priority=32,description="Selenium course information speeling check ")
 	public void selenium_Course_Spell()
 	{
 		Assert.assertEquals(DashboardPagee.seleniumcoursetext(),"Selenium");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=42,description="automation heading speeling check ")
+	@Test(priority=33,description="automation heading speeling check ")
 	public void automationtest_spell()
 	{
 		Assert.assertEquals(DashboardPagee.automationtesttext(), "Automation Testing");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spel");
 	}
 	
-	@Test(priority =43)
-	public void verifyUserLink() throws InterruptedException{
+	@Test(priority=34)
+	public void verifyUserLink() throws Exception{
     System.out.println("tstcase 1 >>>verifyUserLink");
 		try {
 			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;
-			DashboardPagee.usernavigationtext().click();
+			click(DashboardPagee.usernavigationtext());
 			Thread.sleep(2000);
 			String actResult =driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div/div[1]/h3")).getText();
 			String expResult = "User List";
@@ -336,9 +335,9 @@ public class DashboardPageTest extends TestBase {
 		} catch (NoSuchElementException e) {
 			System.out.println("Page not found >>> It is a error ");
 		}
-		System.out.println("==========================");	
+			
 	}	
-	@Test(priority =44)
+	@Test(priority=35)
 	public void verifyOperatorslink() {
 		System.out.println("tstcase 2 >>>verifyOperatorslink");
 		try {
@@ -353,7 +352,7 @@ public class DashboardPageTest extends TestBase {
 		}
 		System.out.println("==========================");
 	}
-	@Test(priority =45)
+	@Test(priority=36)
 	public void verifyUsefulLink(){
 		System.out.println("tstcase 3 >>>verifyUsefulLink");
 		DashboardPagee.usefullinksnavigationtext().click();
@@ -363,7 +362,7 @@ public class DashboardPageTest extends TestBase {
 		Assert.assertEquals(actResult, expResult);
 		System.out.println("==========================");
 	}
-	@Test(priority =46)
+	@Test(priority=37)
 	public void verifyDownloadLink() throws InterruptedException{
 		System.out.println("tstcase 4 >>>verifyDownloadLink");
 		DashboardPagee.downloadsnavigationtext().click();

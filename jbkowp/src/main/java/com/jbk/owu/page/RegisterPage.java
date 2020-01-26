@@ -5,7 +5,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.jbk.owp.base.TestBase;
 
-public class RegisterPage extends TestBase {
+public class RegisterPage  {
 	@FindBy(xpath = "/html/body/div/div[2]/a")
 	private static WebElement link_RegisterMemberlink;
 

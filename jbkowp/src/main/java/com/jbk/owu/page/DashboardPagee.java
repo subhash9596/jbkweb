@@ -16,7 +16,7 @@ public class DashboardPagee  {
 	@FindBy(xpath="//ul[@class=\"sidebar-menu\"]//*[.='Dashboard']")
 	private static WebElement dashboard_navigation_text;
 
-	@FindBy(xpath="//ul[@class='sidebar-menu']//*[.='Users']")
+	@FindBy(xpath="//a[@href='users.html']")
 	private static WebElement user_navigation_text;
 
 	@FindBy(xpath="//ul[@class='sidebar-menu']//*[.='Operators']")

@@ -35,8 +35,6 @@ import com.jbk.owu.util.Screenshot;
 import com.jbk.owu.util.Retry;
 import com.jbk.owu.util.SendEmail;
 
-
-
 public  class TestBase {
 	public static WebDriver  driver;
 	public static Logger logger = LogManager.getLogger(TestBase.class);
@@ -57,7 +55,6 @@ public  class TestBase {
 	public void Setup(){
 		openBrowser();
 		Reporter.log("=====Application Started ========",true);
-
 		Reports.startReport();
 	}
 	public static WebDriver openBrowser(){
@@ -130,6 +127,8 @@ public  class TestBase {
 		}
 
 	}
+	
+	//Sel
 
 	// This method can Redirects or Navigate to particular URL
 	public static void get(String url) throws Exception {
@@ -167,21 +166,21 @@ public  class TestBase {
 	}
 
 	// This method can click on any web-element
-	public static void click(WebElement element, String object) throws Exception {
+	public static void click(WebElement element) throws Exception {
 		try {
 			if (isDisplayed(element) == true) {
 				element.click();
-				//	Reports.passTest(object);
+				
 			} else {
-				//Reports.failTest(object);
+			
 			}
 		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
+		
 		}
 	}
 	// Taken 3 parameter, 1st for locator, 2nd string/text, 3rd for show that object
 	// text on report
-	public static void sendKeys(WebElement element, String str, String object) throws Exception {
+	public static void sendKeys(WebElement element, String str) throws Exception {
 		try {
 			if (isDisplayed(element) == true) {
 				element.sendKeys(str);
@@ -266,7 +265,7 @@ public  class TestBase {
 	}
 	// Method to clear the text box value
 
-	public static void clear(WebElement element, String object) throws Exception {
+	public static void clear(WebElement element) throws Exception {
 		try {
 			if (isDisplayed(element) == true) {
 
@@ -283,7 +282,7 @@ public  class TestBase {
 
 	}
 	// Get element text
-	public static String getText(WebElement element, String object) throws Exception {
+	public static String getText(WebElement element) throws Exception {
 		String text = null;
 		try {
 			text = element.getText();
@@ -295,7 +294,7 @@ public  class TestBase {
 	}
 
 	// Get element value
-	public static String getValue(WebElement element, String attribute, String object) throws Exception {
+	public static String getValue(WebElement element, String attribute) throws Exception {
 		String value = null;
 		try {
 			value = element.getAttribute(attribute);

@@ -28,7 +28,7 @@ public class LoginPage  {
     
 	@FindBy(xpath = "//*[@id='email_error']")
 	private static WebElement msg_erroremail;
-
+	
 	@FindBy(xpath = "//*[@id='password_error']")
 	private static WebElement msg_errorpwd;
 
