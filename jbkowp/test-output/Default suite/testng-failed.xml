@@ -3,15 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jbk.owp.test.AddUserPageTest">
+      <class name="com.jbk.owp.test.LoginPageTest">
         <methods>
           <include name="getResult"/>
           <include name="CloseApplication"/>
           <include name="Setup"/>
+          <include name="verifyApplicationTitle"/>
+          <include name="verifyTitle"/>
           <include name="setupTest"/>
-          <include name="Fill_Form"/>
         </methods>
-      </class> <!-- com.jbk.owp.test.AddUserPageTest -->
+      </class> <!-- com.jbk.owp.test.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

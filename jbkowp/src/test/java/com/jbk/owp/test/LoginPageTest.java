@@ -37,7 +37,7 @@ public class LoginPageTest extends TestBase{
 	}
 	@Test(priority=2,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyApplicationTitle() throws Exception{
-		AssertJUnit.assertEquals(getTitle(), "JavaByKiran | Log in");
+		AssertJUnit.assertEquals(getTitle(), "JavaByKiran | Log ");
 		Reports.test=Reports.extent.createTest("verifyApplicationTitle", "This test case validate to check Title of offline application");
 	}
 	@Test(priority=3,groups="Regression",retryAnalyzer = Retry.class)

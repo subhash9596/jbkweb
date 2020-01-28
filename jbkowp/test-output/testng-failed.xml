@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.jbk.owp.test.LoginPageTest">
@@ -8,10 +8,11 @@
           <include name="getResult"/>
           <include name="CloseApplication"/>
           <include name="Setup"/>
+          <include name="verifyApplicationTitle"/>
           <include name="verifyTitle"/>
           <include name="setupTest"/>
         </methods>
       </class> <!-- com.jbk.owp.test.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Regression] -->
+</suite> <!-- Failed suite [Default suite] -->

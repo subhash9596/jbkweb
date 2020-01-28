@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Regression]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jbk.owp.test.LoginPageTest">
+      <class name="com.jbk.owp.test.DashboardPageTest2">
         <methods>
           <include name="getResult"/>
+          <include name="CheckMainNavigationText"/>
           <include name="CloseApplication"/>
           <include name="Setup"/>
-          <include name="verifyTitle"/>
-          <include name="setupTest"/>
+          <include name="Dashboard_Main_Heading_Text_Check"/>
         </methods>
-      </class> <!-- com.jbk.owp.test.LoginPageTest -->
+      </class> <!-- com.jbk.owp.test.DashboardPageTest2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Regression] -->

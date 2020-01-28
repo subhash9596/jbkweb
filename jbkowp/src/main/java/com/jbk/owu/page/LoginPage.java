@@ -8,6 +8,7 @@ import com.jbk.owp.base.TestBase;
 
 public class LoginPage  {
 
+
 	@FindBy(xpath = "/html/body/div/div[1]/a/b ")
 	private static WebElement text_title;
 

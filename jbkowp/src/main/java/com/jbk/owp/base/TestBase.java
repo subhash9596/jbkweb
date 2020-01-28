@@ -35,6 +35,7 @@ import com.jbk.owu.util.Screenshot;
 import com.jbk.owu.util.Retry;
 import com.jbk.owu.util.SendEmail;
 
+
 public  class TestBase {
 	public static WebDriver  driver;
 	public static Logger logger = LogManager.getLogger(TestBase.class);
@@ -50,11 +51,13 @@ public  class TestBase {
 	public static String report = PropertyManager.getInstance().getReport();
 	public static String screenshot = PropertyManager.getInstance().getScreenshot();
 	public static String sendemail=PropertyManager.getInstance().getSendemail();
-	//public static String report = "Y";
 	@BeforeSuite
 	public void Setup(){
 		openBrowser();
 		Reporter.log("=====Application Started ========",true);
+		Screenshot.CreateDirectory(currentDir + "\\" + "Reports");
+		Screenshot.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_EnsoulReport");
+		Screenshot.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_EnsoulReport\\Screenshots");
 		Reports.startReport();
 	}
 	public static WebDriver openBrowser(){
@@ -128,40 +131,27 @@ public  class TestBase {
 
 	}
 	
-	//Sel
 
 	// This method can Redirects or Navigate to particular URL
 	public static void get(String url) throws Exception {
-		try {
+		
 			if (url != null) {
 				driver.get(url);
 			}
-		} catch (Exception e) {
-			System.out.println("invaid URL pleaes check ");
-		}
-	}
+		} 
+		
 
 	// This method can get the current URL of application
 	public static String getcurrentURL ()  {
-
 		String currentURL = null;
-		try {
-			currentURL = driver.getCurrentUrl();
-			//Reports.passTest(object);
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
-		}
+		currentURL = driver.getCurrentUrl();
 		return currentURL;
 	}
 
 	// This method can Redirects or Navigate to particular URL
 	public static void navigate(String url) throws Exception {
-		try {
 			if (url != null) {
 				driver.navigate().to(url);
-			}
-		} catch (Exception e) {
-
 		}
 	}
 
@@ -524,11 +514,3 @@ public  class TestBase {
 	}
 
 }
-
-
-
-
-
-
-
-

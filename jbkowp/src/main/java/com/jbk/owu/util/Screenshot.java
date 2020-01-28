@@ -10,6 +10,7 @@ import com.jbk.owp.base.TestBase;
 
 
 public class Screenshot extends TestBase{	
+	
 	private static String path = currentDir + "\\Reports\\" + timeStamp +"_OWPReport\\Screenshots\\";
 	public static String getScreenshot(WebDriver driver,String name) throws IOException {
 		if(screenshot.equals("Y")){
@@ -22,19 +23,30 @@ public class Screenshot extends TestBase{
 		}
 		return screenshot;				
 	}
-//	public static void CreateDirectory(String DirectoryName)
-//	{
-//		//project directory
-//		String  dir = DirectoryName;
-//		
-//		//create a directory in the path
-//		File file = new File(dir);
-//
-//		if (!file.exists()) {
-//			file.mkdir();
-//		} else {
-//			System.out.println("Directory is already exist!");
-//		}
+	
+//	private static String path = currentDir + "\\Reports\\" + timeStamp +"_OWPReport\\Screenshots\\" ;
+//	public static String getScreenshot(WebDriver driver, String path) throws IOException {
+//		TakesScreenshot ts = (TakesScreenshot) driver;
+//		File source = ts.getScreenshotAs(OutputType.FILE);
+//		String destination = path+"_Fail.png";
+//		File finalDestination = new File(destination);
+//		FileUtils.copyFile(source, finalDestination);
+//		return destination;
 //	}
+//
+	public static void CreateDirectory(String DirectoryName)
+	{
+		//project directory
+		String  dir = DirectoryName;
+		
+		//create a directory in the path
+		File file = new File(dir);
+
+		if (!file.exists()) {
+			file.mkdir();
+		} else {
+			System.out.println("Directory is already exist!");
+		}
+	}
 
 	}

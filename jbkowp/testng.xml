@@ -4,8 +4,8 @@
  <test  name="Default test" >
     <classes>
       <class name="com.jbk.owp.base.TestBase"/>
-      <class name="com.jbk.owp.test.LoginPageTest"/> 
-      <class name="com.jbk.owp.test.AddUserPageTest"/> 
+      <class name="com.jbk.owp.test.LoginPageTest2"/> 
+      <class name="com.jbk.owp.test.DashboardPageTest2"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
