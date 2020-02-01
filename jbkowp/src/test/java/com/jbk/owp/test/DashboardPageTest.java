@@ -24,12 +24,12 @@ public class DashboardPageTest extends TestBase {
  
 	RegisterPage Resisterpage;
 	LoginPage loginpage;
+	DashboardPagee Dashboardpage;
 
 	@BeforeMethod
 	public void setupTest() throws IOException
 	{
 		DashboardPagee dp= new DashboardPagee();
-		PageFactory.initElements(driver, DashboardPagee.class);
 	}
 	@Test(priority=1)
 	public void CheckMainNavigationText() {

@@ -56,8 +56,8 @@ public  class TestBase {
 		openBrowser();
 		Reporter.log("=====Application Started ========",true);
 		Screenshot.CreateDirectory(currentDir + "\\" + "Reports");
-		Screenshot.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_EnsoulReport");
-		Screenshot.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_EnsoulReport\\Screenshots");
+		Screenshot.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_OWPReport");
+		Screenshot.CreateDirectory(currentDir + "\\Reports\\" + timeStamp + "_OWPReport\\Screenshots");
 		Reports.startReport();
 	}
 	public static WebDriver openBrowser(){
@@ -126,55 +126,41 @@ public  class TestBase {
 				Reports.test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() +" Test Case Skip ", ExtentColor.ORANGE));
 				Reports.test.skip(result.getThrowable());
 			}Reports.extent.flush();
-
 		}
-
 	}
-	
+
 
 	// This method can Redirects or Navigate to particular URL
 	public static void get(String url) throws Exception {
-		
-			if (url != null) {
-				driver.get(url);
-			}
-		} 
-		
-
+		if (url != null) {
+			driver.get(url);
+		}
+	} 
 	// This method can get the current URL of application
 	public static String getcurrentURL ()  {
 		String currentURL = null;
 		currentURL = driver.getCurrentUrl();
 		return currentURL;
 	}
-
 	// This method can Redirects or Navigate to particular URL
 	public static void navigate(String url) throws Exception {
-			if (url != null) {
-				driver.navigate().to(url);
+		if (url != null) {
+			driver.navigate().to(url);
 		}
 	}
 
 	// This method can click on any web-element
 	public static void click(WebElement element) throws Exception {
-		try {
 			if (isDisplayed(element) == true) {
-				element.click();
-				
-			} else {
-			
-			}
-		} catch (Exception e) {
-		
+			element.click();
 		}
 	}
 	// Taken 3 parameter, 1st for locator, 2nd string/text, 3rd for show that object
 	// text on report
-	public static void sendKeys(WebElement element, String str) throws Exception {
+	public static void sendKeys(WebElement element,String str,String object) throws Exception {
 		try {
 			if (isDisplayed(element) == true) {
 				element.sendKeys(str);
-
 				//Reports.passTest(str + " " + object);
 			} else {
 				//Reports.failTest(object);
@@ -184,50 +170,29 @@ public  class TestBase {
 		}
 	}
 	public static void javaScriptClear(WebElement element, String object) throws Exception {
-		try {
-			if (isDisplayed(element) == true) {
-				JavascriptExecutor js = (JavascriptExecutor) driver;
-				js.executeScript("arguments[0].value = '';", element);
-				//Reports.passTest(object);
-			} else {
-				//Reports.failTest(object);
-			}
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
+
+		if (isDisplayed(element) == true) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].value = '';", element);
 		}
-	}
+		}
 	// To Switch to new window
-
 	public static void switchTonewWndow(WebElement element, String object) throws Exception {
-
-		try {
 			if (isDisplayed(element) == true) {
-
 				// Store the current window handle
 				String winHandleBefore = driver.getWindowHandle();
-
 				// Perform the click operation that opens new window
-
 				// Switch to new window opened
 				for (String winHandle : driver.getWindowHandles()) {
 					driver.switchTo().window(winHandle);
 					//Reports.passTest(object);
 				}
-			} else {
-				//Reports.failTest(object);
 			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-
-			//Reports.failTest(object + e.getMessage());
-			e.printStackTrace();
-		}
-
 	}
 
 	// To verify text is present on screen.
 
-	public static void isTextPresent(WebElement element, String str, String object) throws Exception {
+	public static void isTextPresent(WebElement element, String str) throws Exception {
 		try {
 			if (isDisplayed(element) == true) {
 
@@ -256,189 +221,117 @@ public  class TestBase {
 	// Method to clear the text box value
 
 	public static void clear(WebElement element) throws Exception {
-		try {
+		
 			if (isDisplayed(element) == true) {
-
 				element.clear();
-				//Reports.passTest(object);
-			} else {
-				//Reports.failTest(object);
+			
 			}
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			//Reports.failTest(object + e.getMessage());
-			e.printStackTrace();
+		
 		}
 
-	}
 	// Get element text
 	public static String getText(WebElement element) throws Exception {
 		String text = null;
-		try {
-			text = element.getText();
-			//Reports.passTest(object);
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
-		}
+		text = element.getText();
 		return text;
 	}
 
 	// Get element value
 	public static String getValue(WebElement element, String attribute) throws Exception {
 		String value = null;
-		try {
-			value = element.getAttribute(attribute);
-			//Reports.passTest(object);
-		} catch (Exception e) {
-			e.printStackTrace();
-			//Reports.failTest(object);
-		}
+        value = element.getAttribute(attribute);
 		return value;
 	}
 
 	// Get element page title
 	public static String getTitle() throws Exception {
 		String title = null;
-		try {
-			title = driver.getTitle();
-			//Reports.passTest(object);
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
-		}
+	    title = driver.getTitle();
 		return title;
 	}
 
 	// Mouse over on element
-	public static void mouseOver(WebElement element, String object) throws Exception {
-		try {
+	public static void mouseOver(WebElement element) throws Exception {
+		
 			if (isDisplayed(element) == true) {
 				Actions act = new Actions(driver);
 				act.moveToElement(element).build().perform();
-				//Reports.passTest(object);
-			} else {
-				//Reports.failTest(object);
-			}
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
 		}
 	}
 	// Double click on element
-	public static void contextClick(WebElement element, String object) throws Exception {
-		try {
+	public static void contextClick(WebElement element) throws Exception {
+
 			if (isDisplayed(element) == true) {
 				Actions act = new Actions(driver);
 				act.contextClick(element).build().perform();
 				//Reports.passTest(object);
-			} else {
-				//Reports.failTest(object);
-			}
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
-		}
+			} 
 	}
 
 	// Click And Hold on element
-	public static void clickAndHold(WebElement element, String object) throws Exception {
-		try {
+	public static void clickAndHold(WebElement element) throws Exception {
 			if (isDisplayed(element) == true) {
 				Actions act = new Actions(driver);
 				act.clickAndHold(element).build().perform();
-				//Reports.passTest(object);
-			} else {
-				//Reports.failTest(object);
-			}
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
+			} 
 		}
-	}
+	
 
 	// Drag And Drop the element
-	public static void dragAndDrop(WebElement element1, WebElement element2, String object) throws Exception {
-		try {
+	public static void dragAndDrop(WebElement element1, WebElement element2) throws Exception {
 			if (isDisplayed(element1) && isDisplayed(element2) == true) {
 				Actions act = new Actions(driver);
 				act.dragAndDrop(element1, element2).build().perform();
-				//Reports.passTest(object);
-			} else {
-				//Reports.failTest(object);
-			}
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
+			} 
 		}
-	}
+	
 
 	// Move To Element
-	public static void moveToElement(WebElement element, String object) throws Exception {
-		try {
+	public static void moveToElement(WebElement element) throws Exception {
 			if (isDisplayed(element) == true) {
 				Actions act = new Actions(driver);
 				act.moveToElement(element).build().perform();
-				//Reports.passTest(object);
-			} else {
-				//Reports.failTest(object);
-			}
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
 		}
 	}
 
 	// Move To Element
-	public static void javaScriptMoveToElement(WebElement element, String object) throws Exception {
-		try {
+	public static void javaScriptMoveToElement(WebElement element) throws Exception {
 			JavascriptExecutor jse2 = (JavascriptExecutor) driver;
 			jse2.executeScript("arguments[0].scrollIntoView()", element);
 
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
 		}
-	}
-
+	
 	// Accept Alerts
-	public static void acceptAlert(String object) throws Exception {
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, 10);
+	public static void acceptAlert() throws Exception {
+			WebDriverWait wait = new WebDriverWait(driver, 5);
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
-			alert.accept();
-			//Reports.passTest(object);
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
-		}
+			alert.accept();	
 	}
 	// Dismiss Alerts
-	public static void dismissAlert(String object) throws Exception {
-		try {
+	public static void dismissAlert() throws Exception {
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
 			alert.dismiss();
-			//Reports.passTest(object);
-		} catch (Exception e) {
-			//Reports.failTest(object + e.getMessage());
-		}
 	}
 
 	// Select drop down element by Text
-	public static void selectByVisibleText(WebElement element, String str, String object) throws Exception {
+	public static void selectByVisibleText(WebElement element, String str) throws Exception {
 
 		if (isDisplayed(element) == true) {
 			Select select = new Select(element);
 			select.selectByVisibleText(str);
-			//Reports.passTest(object);
-		} else {
-			//Reports.failTest(object);
 		}
 	}
 
 	// Select drop down element by Value
-	public static void selectByValue(WebElement element, String str, String object) throws Exception {
+	public static void selectByValue(WebElement element, String str) throws Exception {
 
 		if (isDisplayed(element) == true) {
 			Select select = new Select(element);
 			select.selectByValue(str);
-			//Reports.passTest(object);
-		} else {
-			//Reports.failTest(object);s
+	
 		}
 	}
 
@@ -448,46 +341,34 @@ public  class TestBase {
 		if (isDisplayed(element) == true) {
 			Select select = new Select(element);
 			select.selectByIndex(index);
-			//Reports.passTest(object);
-		} else {
-			//Reports.failTest(object);
 		}
 	}
 	// Check is element display on web page
 	public static boolean isDisplayed(WebElement element) throws Exception {
 		boolean visible;
-		try {
 			element.isDisplayed();
 			((JavascriptExecutor) driver).executeScript("arguments[0].style.border='2px solid green'", element);
 			visible = true;
-		} catch (Exception e) {
 			visible = false;
-		}
-		return visible;
+		    return visible;
 	}
 
 	// Check is element Enabled on web page
 	public static boolean isEnabled(WebElement element) {
 		boolean visible;
-		try {
 			element.isEnabled();
 			visible = true;
-		} catch (Exception e) {
 			visible = false;
-		}
-		return visible;
+		    return visible;
 	}
 
 	// Check is element Selected on web page
 	public static boolean isSelected(WebElement element) {
 		boolean visible;
-		try {
 			element.isSelected();
 			visible = true;
-		} catch (Exception e) {
 			visible = false;
-		}
-		return visible;
+		   return visible;
 	}
 
 	// Wait for any element for specific seconds

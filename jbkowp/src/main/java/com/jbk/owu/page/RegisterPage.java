@@ -2,10 +2,17 @@ package com.jbk.owu.page;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.jbk.owp.base.TestBase;
 
-public class RegisterPage  {
+public class RegisterPage extends TestBase  {
+	
+	public RegisterPage() {
+		super();
+		PageFactory.initElements(driver,this);
+	}
+	
 	@FindBy(xpath = "/html/body/div/div[2]/a")
 	private static WebElement link_RegisterMemberlink;
 
@@ -45,10 +52,7 @@ public class RegisterPage  {
 	@FindBy(xpath = "/html/body/div/div[2]/a")
 	private static WebElement click_AlreadyMembership;
 	
-	public RegisterPage() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	
 
 	public static WebElement getLink_RegisterMemberlink() {
 		return link_RegisterMemberlink;

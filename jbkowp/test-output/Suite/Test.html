@@ -1,12 +1,17 @@
 <html>
 <head>
-<title>TestNG:  Test</title>
+<title>TestNG: Test</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
-.log { display: none;} 
-.stack-trace { display: none;} 
+.log {
+	display: none;
+}
+
+.stack-trace {
+	display: none;
+}
 </style>
 <script type="text/javascript">
 <!--
@@ -53,30 +58,49 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>Test</h2><table border='1' align="center">
-<tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
-</tr><tr>
-<td>Started on:</td><td>Sat Jan 25 07:40:03 IST 2020</td>
-</tr>
-<tr><td>Total time:</td><td>20 seconds (20388 ms)</td>
-</tr><tr>
-<td>Included groups:</td><td></td>
-</tr><tr>
-<td>Excluded groups:</td><td></td>
-</tr>
-</table><p/>
-<small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.jbk.owp.test.DashboardPageTest.CheckMainNavigationText()'><b>CheckMainNavigationText</b><br>Test class: com.jbk.owp.test.DashboardPageTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //ul[@class=&quot;sidebar-menu&quot;]//*[.=&apos;MAIN NAVIGATION&apos;]
+	<h2 align='center'>Test</h2>
+	<table border='1' align="center">
+		<tr>
+			<td>Tests passed/Failed/Skipped:</td>
+			<td>1/1/0</td>
+		</tr>
+		<tr>
+			<td>Started on:</td>
+			<td>Sat Jan 25 07:40:03 IST 2020</td>
+		</tr>
+		<tr>
+			<td>Total time:</td>
+			<td>20 seconds (20388 ms)</td>
+		</tr>
+		<tr>
+			<td>Included groups:</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Excluded groups:</td>
+			<td></td>
+		</tr>
+	</table>
+	<p />
+	<small><i>(Hover the method name to see the test class
+			name)</i></small>
+	<p />
+	<table width='100%' border='1' class='invocation-failed'>
+		<tr>
+			<td colspan='4' align='center'><b>FAILED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td
+				title='com.jbk.owp.test.DashboardPageTest.CheckMainNavigationText()'><b>CheckMainNavigationText</b><br>Test
+				class: com.jbk.owp.test.DashboardPageTest</td>
+			<td><div>
+					<pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //ul[@class=&quot;sidebar-menu&quot;]//*[.=&apos;MAIN NAVIGATION&apos;]
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
 System info: host: &apos;SUBHASHA-PC&apos;, ip: &apos;192.168.1.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
@@ -98,8 +122,13 @@ Session ID: fce2bae1-b4f7-4a3f-a7b5-09d21aae8c70
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy29.getText(Unknown Source)
 	at com.jbk.owp.test.DashboardPageTest.CheckMainNavigationText(DashboardPageTest.java:37)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace207546206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace207546206'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //ul[@class=&quot;sidebar-menu&quot;]//*[.=&apos;MAIN NAVIGATION&apos;]
+... Removed 29 stack frames</pre>
+				</div>
+				<a href='#'
+				onClick='toggleBox("stack-trace207546206", this, "Click to show all stack frames", "Click to hide stack frames")'>Click
+					to show all stack frames</a>
+				<div class='stack-trace' id='stack-trace207546206'>
+					<pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //ul[@class=&quot;sidebar-menu&quot;]//*[.=&apos;MAIN NAVIGATION&apos;]
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;
 System info: host: &apos;SUBHASHA-PC&apos;, ip: &apos;192.168.1.203&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
@@ -150,22 +179,31 @@ Session ID: fce2bae1-b4f7-4a3f-a7b5-09d21aae8c70
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</pre></div></td>
-<td>20</td>
-<td>com.jbk.owp.test.DashboardPageTest@40005471</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.jbk.owp.test.LoginPageTest.verify_Current_Url()'><b>verify_Current_Url</b><br>Test class: com.jbk.owp.test.LoginPageTest</td>
-<td></td>
-<td>0</td>
-<td>com.jbk.owp.test.LoginPageTest@3d285d7e</td></tr>
-</table><p>
+</pre>
+				</div></td>
+			<td>20</td>
+			<td>com.jbk.owp.test.DashboardPageTest@40005471</td>
+		</tr>
+	</table>
+	<p>
+	<table width='100%' border='1' class='invocation-passed'>
+		<tr>
+			<td colspan='4' align='center'><b>PASSED TESTS</b></td>
+		</tr>
+		<tr>
+			<td><b>Test method</b></td>
+			<td width="30%"><b>Exception</b></td>
+			<td width="10%"><b>Time (seconds)</b></td>
+			<td><b>Instance</b></td>
+		</tr>
+		<tr>
+			<td title='com.jbk.owp.test.LoginPageTest.verify_Current_Url()'><b>verify_Current_Url</b><br>Test
+				class: com.jbk.owp.test.LoginPageTest</td>
+			<td></td>
+			<td>0</td>
+			<td>com.jbk.owp.test.LoginPageTest@3d285d7e</td>
+		</tr>
+	</table>
+	<p>
 </body>
 </html>

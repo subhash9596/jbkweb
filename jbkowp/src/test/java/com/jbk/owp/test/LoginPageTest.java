@@ -1,13 +1,12 @@
 package com.jbk.owp.test;
 
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+
 import java.io.IOException;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
@@ -24,41 +23,46 @@ import com.jbk.owu.util.Retry;
 public class LoginPageTest extends TestBase{
 	RegisterPage Resisterpage;
 	LoginPage loginpage;
+	DashboardPagee Dashboardpage;
+	
+	public LoginPageTest() {
+		super();
+	}
 	@BeforeMethod
 	public void setupTest() throws IOException
 	{
 		loginpage = new LoginPage();
-		PageFactory.initElements(driver, LoginPage.class);
 	}
+	
 	@Test(priority=1,groups="Regression",retryAnalyzer = Retry.class)
 	public void verify_Current_Url() throws Exception{
-		AssertJUnit.assertEquals(getcurrentURL(), "file:///E:/Offline%20Website/index.html");
+		Assert.assertEquals(getcurrentURL(), "file:///E:/Offline%20Website/index.html");
 		Reports.test=Reports.extent.createTest("verifyUrl", "This test case validate to check URL of offlien application");	
 	}
 	@Test(priority=2,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyApplicationTitle() throws Exception{
-		AssertJUnit.assertEquals(getTitle(), "JavaByKiran | Log ");
+		Assert.assertEquals(getTitle(), "JavaByKiran | Log ");
 		Reports.test=Reports.extent.createTest("verifyApplicationTitle", "This test case validate to check Title of offline application");
 	}
 	@Test(priority=3,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyTitle() throws Exception{
 		//getText(LoginPage.getText_title(), "test of the application")
-		AssertJUnit.assertEquals(getText(LoginPage.getText_title()),"Java By subhash");
+		Assert.assertEquals(getText(LoginPage.getText_title()),"Java By subhash");
 		Reports.test=Reports.extent.createTest("verifyTitle", "This test case validate to check text java by Kiran on login page ");
 	}
 	@Test(priority=4,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyloginsesion() throws Exception{
-		AssertJUnit.assertEquals(getText(LoginPage.getText_Loignsession()), "Sign in to start your session");
+		Assert.assertEquals(getText(LoginPage.getText_Loignsession()), "Sign in to start your session");
 		Reports.test=Reports.extent.createTest("verifyloginsesion", "This test case validate to check session message on login page");
 	}
 	@Test(priority=5,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyPlaceHolderUsername() throws Exception {
-		AssertJUnit.assertEquals(getValue(LoginPage.getEmail(), "placeholder"), "Email");
+		Assert.assertEquals(getValue(LoginPage.getEmail(), "placeholder"), "Email");
 		Reports.test=Reports.extent.createTest("verifyPlaceHolderUsername", "This test case validate to check placeholder of username on login page");
 	}
 	@Test(priority=6,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyPlaceHolderPassword() throws Exception {
-		AssertJUnit.assertEquals(getValue(LoginPage.getPassword(),"placeholder"), "Password");
+		Assert.assertEquals(getValue(LoginPage.getPassword(),"placeholder"), "Password");
 		Reports.test=Reports.extent.createTest("verifyPlaceHolderPassword", "This test case validate to check placeholder of password on login page");
 	}	
 	@Test(priority=7,groups="Regression",retryAnalyzer = Retry.class)
@@ -80,16 +84,11 @@ public class LoginPageTest extends TestBase{
 			System.out.println("All the links avilabe >>>"+links.get(i).getText());
 		}
 	}
-
 	@Test(priority=9,groups="Regression",dataProviderClass=StaticDataProvider.class,dataProvider = "d_login",retryAnalyzer = Retry.class)
-	public void Login(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
+	public void LoginTest(String tcId, String tcDescription,String Username,String Password,String expResult) throws Exception{
 		System.out.println("Test Case ID >>"+tcId);
 		System.out.println("Test Case ID >>"+tcDescription);
-		clear(LoginPage.getEmail());
-		sendKeys(LoginPage.getEmail(), Username);
-		clear(LoginPage.getPassword());
-		sendKeys(LoginPage.getPassword(), Password);
-		click(LoginPage.getButn_Signin());
+		Dashboardpage=loginpage.login(Username, Password);
 	//	Reports.test=Reports.extent.createTest("Login", "This test case validate to check login functionality with Blank,invalid and Valid info");
 		if(tcDescription.equals("Withblankdinfo")){
 			Assert.assertEquals(getText(LoginPage.getMsg_erroremail()),expResult);
@@ -98,18 +97,10 @@ public class LoginPageTest extends TestBase{
 			Assert.assertEquals(getText(LoginPage.getMsg_erroremail()),expResult);
 			Reports.test=Reports.extent.createTest("LoginwithInvalidInfo", "This test case validate to check login functionality with invalid info");
 		}else if(tcDescription.equals("validInfo")){
-			Assert.assertEquals(getText(DashboardPagee.mainnavigationtext()), expResult);
+			Assert.assertEquals(driver.getTitle(),"JavaByKiran | Dashboard");
 			Reports.test=Reports.extent.createTest("LoginwithValidInfo", "This test case validate to check login functionality with valid info");
 		}
 	}
-//	@Test(priority=10)
-//	public void loginToDashboard() throws Exception{
-//		sendKeys(LoginPage.getEmail(), "kiran@gmail.com");
-//		clear(LoginPage.getPassword());
-//		sendKeys(LoginPage.getPassword(), "123456");
-//		click(LoginPage.getButn_Signin());
-//		
-//	}
 }
 
 

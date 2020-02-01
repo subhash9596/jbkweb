@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Regression" >
- <test  name="Default test" >
-    <classes>
-      <class name="com.jbk.owp.base.TestBase"/>
-      <class name="com.jbk.owp.test.LoginPageTest2"/> 
-      <class name="com.jbk.owp.test.DashboardPageTest2"/> 
-    </classes>
-  </test> <!-- Test -->
+<suite name="Suite1" verbose="1">
+	<test name="JBK_OWP_Base_UserRegister_1">
+		<classes>
+			<class name="com.jbk.owp.base.TestBase" />
+			<class name="com.jbk.owp.test.RegisterMemberPageTest" />
+			<class name="com.jbk.owp.test.LoginPageTest" />
+			<class name="com.jbk.owp.test.DashboardPageTest" />
+			<class name="com.jbk.owp.test.AddUserPageTest" />
+		</classes>
+	</test>
 </suite> <!-- Suite -->

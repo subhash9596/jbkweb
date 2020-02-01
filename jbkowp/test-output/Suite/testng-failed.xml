@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="10" guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="10" verbose="2" name="Default test(failed)">
-    <classes>
-      <class name="com.jbk.owp.test.DashboardPageTest">
-        <methods>
-          <include name="getResult"/>
-          <include name="CloseApplication"/>
-          <include name="Setup"/>
-          <include name="CheckMainNavigationText"/>
-          <include name="setupTest"/>
-        </methods>
-      </class> <!-- com.jbk.owp.test.DashboardPageTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
+<suite thread-count="10" guice-stage="DEVELOPMENT" verbose="2"
+	name="Failed suite [Suite]" parallel="tests">
+	<test thread-count="10" verbose="2" name="Default test(failed)">
+		<classes>
+			<class name="com.jbk.owp.test.DashboardPageTest">
+				<methods>
+					<include name="getResult" />
+					<include name="CloseApplication" />
+					<include name="Setup" />
+					<include name="CheckMainNavigationText" />
+					<include name="setupTest" />
+				</methods>
+			</class> <!-- com.jbk.owp.test.DashboardPageTest -->
+		</classes>
+	</test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

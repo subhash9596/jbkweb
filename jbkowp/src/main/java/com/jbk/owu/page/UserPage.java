@@ -1,11 +1,22 @@
 package com.jbk.owu.page;
 
 
+import java.io.IOException;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
-public class UserPage {
-	
+import com.jbk.owp.base.TestBase;
+public class UserPage extends TestBase {
+	public UserPage() {
+		super();
+		PageFactory.initElements(driver,this);
+		// TODO Auto-generated constructor stub
+	}
+
 	@FindBy(xpath = "//button[@class='btn btn-block btn-primary btn-sm pull-right']")
 	private static WebElement btn_Adduser;
 	
@@ -27,7 +38,7 @@ public class UserPage {
 	@FindBy(xpath="//*[@id='Female']")
 	private static WebElement btn_radios_Female;
 	
-	@FindBy(xpath="/html/body/div/div[1]/section[2]/div/div/div/form/div[1]/div[6]/div/select")
+	@FindBy(xpath=".//select")
 	private static WebElement dropdown_State;
 	
 	@FindBy(xpath="//*[@id='password']")
@@ -96,7 +107,14 @@ public class UserPage {
 	public static WebElement getTitle_AddUser() {
 		return title_AddUser;
 	}
+	public static void selectstate(String selectvalue) {
+		Select s1 = new Select(dropdown_State);
+		s1.selectByValue(selectvalue);
 	
 	}
+      } 
+	
+	
+	
 
 

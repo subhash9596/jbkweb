@@ -1,12 +1,19 @@
 package com.jbk.owu.page;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.jbk.owp.base.TestBase;
 
-public class DashboardPagee  {
+public class DashboardPagee extends TestBase  {
+	
+	public DashboardPagee() {
+		super();
+		PageFactory.initElements(driver, this);
+	}
+
 	@FindBy(xpath="//a/button")
 	private static WebElement add_user_link;
 
@@ -176,15 +183,11 @@ public class DashboardPagee  {
 	public static boolean jbktextlogoisdisplayed()
 	{
 		return jbk_subheading_link.isDisplayed();
-
 	}
-
 	public static WebElement dashboardmainheading()
 	{
 		return dashboard_main_heading;
-
 	}
-
 	public static String dashboard_fottor_text()
 	{
 		return dashboard_fottor_text.getText();
@@ -205,5 +208,9 @@ public class DashboardPagee  {
 	{
 		return automationtest_text.getText();
 	}
-
+    public static  UserPage userpage(){
+   	user_navigation_text.click();
+   	driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div/div[1]/a/button")).click();
+	return new UserPage();	
+    }
 }
