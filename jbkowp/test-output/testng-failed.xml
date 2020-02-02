@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite1]">
-  <test name="JBK_OWP_Base_UserRegister_1">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="test">
     <classes>
       <class name="com.jbk.owp.base.TestBase"/>
       <class name="com.jbk.owp.test.RegisterMemberPageTest"/>
       <class name="com.jbk.owp.test.LoginPageTest"/>
       <class name="com.jbk.owp.test.DashboardPageTest"/>
+      <class name="com.jbk.owp.test.UsersTest"/>
       <class name="com.jbk.owp.test.AddUserPageTest"/>
+      <class name="com.jbk.owp.test.UsefulLinksTest"/>
     </classes>
-  </test> <!-- JBK_OWP_Base_UserRegister_1 -->
-  <test name="JBK_OWP_Base_UserRegister_1(failed)">
+  </test> <!-- test -->
+  <test name="test(failed)">
     <classes>
       <class name="com.jbk.owp.test.DashboardPageTest">
         <methods>
@@ -18,7 +20,6 @@
           <include name="moveover_downloads_Bgcolor"/>
           <include name="moveover_Oprators_Bgcolor"/>
           <include name="moveover_User_Bgcolor"/>
-          <include name="verifyUserLink"/>
           <include name="moveover_UsefulLinks_Bgcolor"/>
           <include name="moveover_Logout_Bgcolor"/>
           <include name="setupTest"/>
@@ -32,24 +33,36 @@
           <include name="setupTest"/>
         </methods>
       </class> <!-- com.jbk.owp.test.LoginPageTest -->
-      <class name="com.jbk.owp.test.RegisterMemberPageTest">
-        <methods>
-          <include name="getResult"/>
-          <include name="setupTest"/>
-        </methods>
-      </class> <!-- com.jbk.owp.test.RegisterMemberPageTest -->
       <class name="com.jbk.owp.base.TestBase">
         <methods>
           <include name="CloseApplication"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- com.jbk.owp.base.TestBase -->
+      <class name="com.jbk.owp.test.RegisterMemberPageTest">
+        <methods>
+          <include name="getResult"/>
+          <include name="setupTest"/>
+        </methods>
+      </class> <!-- com.jbk.owp.test.RegisterMemberPageTest -->
       <class name="com.jbk.owp.test.AddUserPageTest">
         <methods>
           <include name="getResult"/>
           <include name="setupTest"/>
         </methods>
       </class> <!-- com.jbk.owp.test.AddUserPageTest -->
+      <class name="com.jbk.owp.test.UsersTest">
+        <methods>
+          <include name="getResult"/>
+          <include name="setups"/>
+        </methods>
+      </class> <!-- com.jbk.owp.test.UsersTest -->
+      <class name="com.jbk.owp.test.UsefulLinksTest">
+        <methods>
+          <include name="getResult"/>
+          <include name="setupTest"/>
+        </methods>
+      </class> <!-- com.jbk.owp.test.UsefulLinksTest -->
     </classes>
-  </test> <!-- JBK_OWP_Base_UserRegister_1(failed) -->
-</suite> <!-- Failed suite [Suite1] -->
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

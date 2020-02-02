@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite1" verbose="1">
-	<test name="JBK_OWP_Base_UserRegister_1">
+<suite name="Suite">
+	<test name="test">
 		<classes>
 			<class name="com.jbk.owp.base.TestBase" />
 			<class name="com.jbk.owp.test.RegisterMemberPageTest" />
 			<class name="com.jbk.owp.test.LoginPageTest" />
 			<class name="com.jbk.owp.test.DashboardPageTest" />
+			<class name="com.jbk.owp.test.UsersTest"/> 
 			<class name="com.jbk.owp.test.AddUserPageTest" />
+			<class name="com.jbk.owp.test.UsefulLinksTest"/> 
 		</classes>
 	</test>
 </suite> <!-- Suite -->

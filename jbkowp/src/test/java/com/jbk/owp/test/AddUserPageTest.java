@@ -17,7 +17,7 @@ import com.jbk.owu.util.Retry;
 import com.jbk.owu.dataprovider.StaticDataProvider;
 import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.RegisterPage;
-import com.jbk.owu.page.UserPage;
+import com.jbk.owu.page.AddUserPage;
 import com.jbk.owu.page.LoginPage;
 public class AddUserPageTest extends TestBase {
 
@@ -28,47 +28,60 @@ public class AddUserPageTest extends TestBase {
 	@BeforeMethod
 	public void setupTest() throws IOException
 	{
-		UserPage dp= new UserPage();
-		DashboardPage.userpage();
+		AddUserPage dp= new AddUserPage();
+		//DashboardPage.userpage();
 	}
 	@Test(priority=1,dataProviderClass=StaticDataProvider.class,dataProvider = "d_AddUser",retryAnalyzer = Retry.class)
 	public void Fill_Form(String tcid, String tcDescription,String Username,String Mobile,String Email,String Cources,String Gender,String selectvalue,String Password) throws Exception{
+		DashboardPage.userpage();
 		Reports.test=Reports.extent.createTest("verifyAdduser", "This test case validate to check add user functionality with blnk info");
-		clear(UserPage.getTxt_Username());
-		waitForElement(UserPage.getTxt_Username(), 2);
-		UserPage.getTxt_Username().sendKeys(Username);
-		
+		clear(AddUserPage.getTxt_Username());
+		waitForElement(AddUserPage.getTxt_Username(), 2);
+		AddUserPage.getTxt_Username().sendKeys(Username);
 		//sendKeys(UserPage.getTxt_Username(),Username);
-		
-		clear(UserPage.getTxt_Mobile());
-		UserPage.getTxt_Mobile().sendKeys(Mobile);
-	//	waitForElement(UserPage.getTxt_Mobile(), 2);
-		//sendKeys(UserPage.getTxt_Mobile(),Mobile);
-		
-		clear(UserPage.getTxt_Email());
-		//waitForElement(UserPage.getTxt_Email(), 2);
-		UserPage.getTxt_Email().sendKeys(Email);
-		//sendKeys(UserPage.getTxt_Email(),Email);
-		
-	
-		clear(UserPage.getTxt_Course());
-		//waitForElement(UserPage.getTxt_Course(), 2);
-		UserPage.getTxt_Course().sendKeys(Cources);
-		
-		//sendKeys(UserPage.getTxt_Course(),Cources)
+		clear(AddUserPage.getTxt_Mobile());
+		AddUserPage.getTxt_Mobile().sendKeys(Mobile);
+		clear(AddUserPage.getTxt_Email());
+		AddUserPage.getTxt_Email().sendKeys(Email);
+		clear(AddUserPage.getTxt_Course());
+		AddUserPage.getTxt_Course().sendKeys(Cources);
 		if (Gender.equals("Male")) {
-			UserPage.getBtn_radios_Male().click();
+			AddUserPage.getBtn_radios_Male().click();
 		} else if(Gender.equals("Female")) {
-			UserPage.getBtn_radios_Female().click();
+			AddUserPage.getBtn_radios_Female().click();
 		}
-		UserPage.selectstate(selectvalue);
-		clear(UserPage.getTxt_Password());
-		//waitForElement(UserPage.getTxt_Password(), 2);
-		UserPage.getTxt_Password().sendKeys(Password);
-		//sendKeys(UserPage.getTxt_Password(),Password);
-		UserPage.getBtn_Submit().click();
+		AddUserPage.selectstate(selectvalue);
+		clear(AddUserPage.getTxt_Password());
+		AddUserPage.getTxt_Password().sendKeys(Password);
+		AddUserPage.getBtn_Submit().click();
 		 driver.switchTo().alert().accept();
 	    Reports.test=Reports.extent.createTest("LoginwithValidInfo", "This test case validate to check login functionality with valid info");
+		}
+	
+	@Test(priority=2,dataProviderClass=StaticDataProvider.class,dataProvider = "d_AddUser",retryAnalyzer = Retry.class)
+	public void VerifyCancel(String tcid, String tcDescription,String Username,String Mobile,String Email,String Cources,String Gender,String selectvalue,String Password) throws Exception{
+		Reports.test=Reports.extent.createTest("verifyAdduser", "This test case validate to check Cancel functionality with info");
+		
+		clear(AddUserPage.getTxt_Username());
+		waitForElement(AddUserPage.getTxt_Username(), 2);
+		AddUserPage.getTxt_Username().sendKeys(Username);
+		clear(AddUserPage.getTxt_Mobile());
+		AddUserPage.getTxt_Mobile().sendKeys(Mobile);
+		clear(AddUserPage.getTxt_Email());
+		AddUserPage.getTxt_Email().sendKeys(Email);
+		clear(AddUserPage.getTxt_Course());
+		AddUserPage.getTxt_Course().sendKeys(Cources);
+		if (Gender.equals("Male")) {
+			AddUserPage.getBtn_radios_Male().click();
+		} else if(Gender.equals("Female")) {
+			AddUserPage.getBtn_radios_Female().click();
+		}
+		AddUserPage.selectstate(selectvalue);
+		clear(AddUserPage.getTxt_Password());
+		AddUserPage.getTxt_Password().sendKeys(Password);
+		AddUserPage.getBtn_Cancel().click();
+		Assert.assertEquals(getTitle(), "JavaByKiran | User");
+	    Reports.test=Reports.extent.createTest("VerifyCancelWithValid", "This test case validate to check cancel functionality with valid info");
 		}
 	}
 

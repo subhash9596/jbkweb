@@ -1,20 +1,14 @@
 package com.jbk.owu.page;
-
-
-import java.io.IOException;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.jbk.owp.base.TestBase;
-public class UserPage extends TestBase {
-	public UserPage() {
+public class AddUserPage extends TestBase {
+	public AddUserPage() {
 		super();
 		PageFactory.initElements(driver,this);
-		// TODO Auto-generated constructor stub
 	}
 
 	@FindBy(xpath = "//button[@class='btn btn-block btn-primary btn-sm pull-right']")
@@ -55,6 +49,7 @@ public class UserPage extends TestBase {
 	
 	@FindBy(xpath="/a[@href='users.html']")
 	private static WebElement link_User;
+	
 	
 	public static WebElement getLink_User() {
 		return link_User;

@@ -208,9 +208,19 @@ public class DashboardPagee extends TestBase  {
 	{
 		return automationtest_text.getText();
 	}
-    public static  UserPage userpage(){
+    public static  AddUserPage userpage(){
    	user_navigation_text.click();
    	driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div/div[1]/a/button")).click();
-	return new UserPage();	
+	return new AddUserPage();	
     }
+    public static UsersPage user(){
+       	user_navigation_text.click();
+    	return new UsersPage();	
+    
+    } 
+    public static void  UsefulLinkPage (){
+    	useful_links_navigation_text.click();
+    	//return new UsefulLinkPage();	
+    
+    } 
 }

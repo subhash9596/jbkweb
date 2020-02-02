@@ -326,10 +326,9 @@ public class DashboardPageTest extends TestBase {
     System.out.println("tstcase 1 >>>verifyUserLink");
 		try {
 			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;
-			click(DashboardPagee.usernavigationtext());
-			Thread.sleep(2000);
-			String actResult =driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div/div[1]/h3")).getText();
-			String expResult = "User List";
+			DashboardPagee.usernavigationtext().click();
+			String actResult =driver.getTitle();
+			String expResult = "JavaByKiran | User";
 			Reports.test=Reports.extent.createTest("verifyUserLink", "This test case validate to check User link from leftnavigation");
 			Assert.assertEquals(actResult, expResult);
 		} catch (NoSuchElementException e) {
