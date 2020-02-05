@@ -21,7 +21,6 @@
           <include name="moveover_Oprators_Bgcolor"/>
           <include name="moveover_User_Bgcolor"/>
           <include name="moveover_UsefulLinks_Bgcolor"/>
-          <include name="moveover_Logout_Bgcolor"/>
           <include name="setupTest"/>
         </methods>
       </class> <!-- com.jbk.owp.test.DashboardPageTest -->

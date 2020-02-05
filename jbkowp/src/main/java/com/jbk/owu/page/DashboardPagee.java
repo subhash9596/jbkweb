@@ -218,9 +218,9 @@ public class DashboardPagee extends TestBase  {
     	return new UsersPage();	
     
     } 
-    public static void  UsefulLinkPage (){
+    public static UsefulLinkPage usefulllink (){
     	useful_links_navigation_text.click();
-    	//return new UsefulLinkPage();	
+    	return new UsefulLinkPage();	
     
     } 
 }

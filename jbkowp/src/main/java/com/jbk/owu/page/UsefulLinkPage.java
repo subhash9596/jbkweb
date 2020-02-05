@@ -26,7 +26,7 @@ public class UsefulLinkPage extends TestBase {
 	@FindBy(xpath="//a[@href='https://www.javabykiran.com/core-java-interview-question-answer']")
 	private static WebElement Java_Interview;
 
-	@FindBy(xpath="//a[@href='https://www.javabykiran.com/courses']")
+	@FindBy(xpath="//a[@href='https://www.javabykiran.com/core-java-interview-question-answer']")
 	private static WebElement Courses;
 
 	@FindBy(xpath="//a[@href='https://www.javabykiran.com/placement']")
