@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.page.DashboardPagee;
@@ -15,7 +16,9 @@ import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.RegisterPage;
 import com.jbk.owu.page.UsersPage;
 import com.jbk.owu.util.Reports;
-
+import com.jbk.owu.util.Retry;
+import com.jbk.owu.util.TestNgListner;
+@Listeners(TestNgListner.class)
 public class UsersTest extends TestBase {
 
 	RegisterPage Resisterpage;
@@ -28,7 +31,7 @@ public class UsersTest extends TestBase {
 		DashboardPage.user();
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1,groups="Regression",retryAnalyzer = Retry.class)
 	public void getTableData() throws InterruptedException {
 		Reports.extent.createTest("VerifTable count", "This test case validate to Table count");
 		WebElement Table = UsersPage.getUser_Table();
@@ -44,7 +47,7 @@ public class UsersTest extends TestBase {
 		}
 		Thread.sleep(2000);
 	}
-	@Test(priority = 2)
+	@Test(priority = 2,groups="Regression",retryAnalyzer = Retry.class)
 	public void VerifyDelete() throws InterruptedException {
 	
 		Reports.extent.createTest("VerifyDelete", "This test case validate to check delete functionality");

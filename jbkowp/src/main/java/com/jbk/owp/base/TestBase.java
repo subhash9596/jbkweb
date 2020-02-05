@@ -28,11 +28,9 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.jbk.owu.util.Configuration;
-import com.jbk.owu.util.Log4j;
 import com.jbk.owu.util.PropertyManager;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Screenshot;
-import com.jbk.owu.util.Retry;
 import com.jbk.owu.util.SendEmail;
 
 

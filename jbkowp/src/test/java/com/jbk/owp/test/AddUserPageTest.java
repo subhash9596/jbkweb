@@ -1,6 +1,7 @@
 package com.jbk.owp.test;
 import java.io.IOException;
 
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,15 +11,19 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
+import com.jbk.owu.util.TestNgListner;
 import com.jbk.owu.dataprovider.StaticDataProvider;
 import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.RegisterPage;
 import com.jbk.owu.page.AddUserPage;
 import com.jbk.owu.page.LoginPage;
+
+@Listeners(TestNgListner.class)
 public class AddUserPageTest extends TestBase {
 
 	RegisterPage Resisterpage;

@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.jbk.owp.base.TestBase;
@@ -19,7 +20,9 @@ import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.UsefulLinkPage;
 import com.jbk.owu.util.Reports;
-
+import com.jbk.owu.util.Retry;
+import com.jbk.owu.util.TestNgListner;
+@Listeners(TestNgListner.class)
 public class UsefulLinksTest extends TestBase {
 
 	UsefulLinkPage Usefullinkpage;
@@ -38,7 +41,7 @@ public class UsefulLinksTest extends TestBase {
 //		driver.findElement(By.xpath("//a[@href='links.html']")).click();
 //		//DashboardPagee.UsefulLinkPage();
 //	}
-	@Test(priority=2)
+	@Test(priority=2,groups="Regression",retryAnalyzer = Retry.class)
 	public static void VerifyScheduleTab() throws Exception{
 		//DashboardPagee.usefulllink();
 		driver.findElement(By.xpath("//a[@href='links.html']")).click();
@@ -64,7 +67,7 @@ public class UsefulLinksTest extends TestBase {
 		}driver.switchTo().window(parent);
 	}
 
-	@Test(priority=3)
+	@Test(priority=3,groups="Regression",retryAnalyzer = Retry.class)
 	public static void VideoLacturesTab() throws Exception{
 		Reports.extent.createTest("VerifyVideoLecturesTab", "This test case validate to check video Lacture tab");
 		waitForElement(UsefulLinkPage.getVideo_Lactures(), 3);
@@ -87,7 +90,7 @@ public class UsefulLinksTest extends TestBase {
 			}
 		}driver.switchTo().window(parent);
 	}
-	@Test(priority=4)
+	@Test(priority=4,groups="Regression",retryAnalyzer = Retry.class)
 	public static void SeleniumInterview () throws Exception{
 		Reports.extent.createTest("VerifySeleniumInterviewTab", "This test case validate to check selenium interview ");
 		waitForElement(UsefulLinkPage.getSelenium_Interview(), 3);
@@ -111,7 +114,7 @@ public class UsefulLinksTest extends TestBase {
 		}driver.switchTo().window(parent);
 	}
 
-	@Test(priority=5)
+	@Test(priority=5,groups="Regression",retryAnalyzer = Retry.class)
 	public static void JavaInterviewTab() throws Exception{
 		Reports.extent.createTest("VerifyJavaInterviewTab", "This test case validate to check Java Interview tab");
 	//	waitForElement(UsefulLinkPage.getJava_Interview(), 3);
@@ -133,7 +136,7 @@ public class UsefulLinksTest extends TestBase {
 			}
 		}driver.switchTo().window(parent);
 	}
-	@Test(priority=6)
+	@Test(priority=6,groups="Regression",retryAnalyzer = Retry.class)
 	public static void CoursesTab() throws Exception{
 		Reports.extent.createTest("VerifyCoursesTab", "This test case validate to check courses tab");
 		waitForElement(UsefulLinkPage.getCourses(), 3);
@@ -156,7 +159,7 @@ public class UsefulLinksTest extends TestBase {
 		}driver.switchTo().window(parent);
 	}
 	
-	@Test(priority=7)
+	@Test(priority=7,groups="Regression",retryAnalyzer = Retry.class)
 	public static void PlacemntTab() throws Exception{
 		Reports.extent.createTest("VerifyPlacemntTab", "This test case validate to check placement tab");
 		waitForElement(UsefulLinkPage.getPlacement(), 3);

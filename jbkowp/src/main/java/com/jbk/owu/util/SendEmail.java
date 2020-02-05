@@ -17,7 +17,7 @@ public class SendEmail {
 		String[] to={email};
 		String[] cc={};
 		
-		SendEmail.sendMail("ingale.subhash@gmail.com", "baba9596", "smtp.gmail.com",
+		SendEmail.sendMail("ingale.subhash@gmail.com", "varsha@1984", "smtp.gmail.com",
 				"465", "true", "true", true, "javax.net.ssl.SSLSocketFactory", "false",
 				to, cc, "Automation trigger mail for OWP","Please find attached "+reportFileName+" file for detailed status of "+project+" automation execution build status.",
 				path, reportFileName);

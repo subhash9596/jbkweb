@@ -15,16 +15,15 @@ import com.jbk.owu.dataprovider.StaticDataProvider;
 import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.RegisterPage;
-import com.jbk.owu.util.ItestListner;
+import com.jbk.owu.util.TestNgListner;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
 
-@Listeners(ItestListner.class)
+//@Listeners(TestNgListner.class)
 public class LoginPageTest extends TestBase{
 	RegisterPage Resisterpage;
 	LoginPage loginpage;
 	DashboardPagee Dashboardpage;
-	
 	public LoginPageTest() {
 		super();
 	}

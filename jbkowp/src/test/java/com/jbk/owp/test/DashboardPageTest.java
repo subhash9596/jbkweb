@@ -1,6 +1,7 @@
 package com.jbk.owp.test;
 
 import java.io.IOException;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -17,9 +18,11 @@ import com.jbk.owp.base.TestBase;
 import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.RegisterPage;
-import com.jbk.owu.util.ItestListner;
 import com.jbk.owu.util.Reports;
-@Listeners(ItestListner.class)
+import com.jbk.owu.util.Retry;
+import com.jbk.owu.util.TestNgListner;
+
+@Listeners(TestNgListner.class)
 public class DashboardPageTest extends TestBase {
  
 	RegisterPage Resisterpage;
@@ -31,50 +34,50 @@ public class DashboardPageTest extends TestBase {
 	{
 		DashboardPagee dp= new DashboardPagee();
 	}
-	@Test(priority=1)
+	@Test(priority=1,groups="Regression",retryAnalyzer = Retry.class)
 	public void CheckMainNavigationText() {
 		Assert.assertEquals(DashboardPagee.mainnavigationtext().getText(), "MAIN NAVIGATION");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "Main Navigation Speeling Chec");
 		Reports.test.log(Status.INFO,"Main Navigation Speeling Check");
 	}	  	  
 
-	@Test(priority=2,description="Dashboard  Main Heading spell check")
+	@Test(priority=2,groups="Regression",retryAnalyzer = Retry.class)
 	public void Dashboard_Main_Heading_Text_Check() {
 		Assert.assertEquals(DashboardPagee.dashboardmainheading().getText(), "Dashboard Courses Offered");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=3,description="Users Navigation Speeling Check")
+	@Test(priority=3,groups="Regression",retryAnalyzer = Retry.class)
 	public void user_Navigation_spell_Check() {
 		Assert.assertEquals(DashboardPagee.usernavigationtext().getText(), "Users");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=4,description="Oprators Navigation Speeling Check")
+	@Test(priority=4,groups="Regression",retryAnalyzer = Retry.class)
 	public void oprators_Navigation_spell_Check() {
 		Assert.assertEquals(DashboardPagee.operatorsnavigationtext().getText(), "Operators");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=5,description="Useful Links Navigation Speeling Check")
+	@Test(priority=5,groups="Regression",retryAnalyzer = Retry.class)
 	public void  useful_Links_spell_Check() {
 		Assert.assertEquals(DashboardPagee.usefullinksnavigationtext().getText(), "Useful Links");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");;
 	}
 
-	@Test(priority=6,description="Downloads Navigation Speeling Check")
+	@Test(priority=6,groups="Regression",retryAnalyzer = Retry.class)
 	public void  downloads_Navigation_Spelling_Check() {
 		Assert.assertEquals(DashboardPagee.downloadsnavigationtext().getText(), "Downloads");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=7,description="Logout Navigation Speeling Check")
+	@Test(priority=7,groups="Regression",retryAnalyzer = Retry.class)
 	public void  logout_Navigation_Spelling_Check() {
 		Assert.assertEquals(DashboardPagee.logoutnavigationtext().getText(), "Logout");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=8,description="Dashboard Navigation link Check")
+	@Test(priority=8,groups="Regression",retryAnalyzer = Retry.class)
 	public void Dashboard_Navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/dashboard.html";
 		try
@@ -86,7 +89,7 @@ public class DashboardPageTest extends TestBase {
 			System.out.println("Dashboard navigation link changed...");
 		}
 	}
-	@Test(priority=9,description="User Navigation link Check")
+	@Test(priority=9,groups="Regression",retryAnalyzer = Retry.class)
 	public void user_Navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/users.html";
 		try
@@ -99,7 +102,7 @@ public class DashboardPageTest extends TestBase {
 		}
 	}
 
-	@Test(priority=10,description="Operators Navigation link Check")
+	@Test(priority=10,groups="Regression",retryAnalyzer = Retry.class)
 	public void oprators_Navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/operators.html";
 		try
@@ -112,7 +115,7 @@ public class DashboardPageTest extends TestBase {
 		}
 	}
 
-	@Test(priority=11,description="Useful Links Navigation link Check")
+	@Test(priority=11,groups="Regression",retryAnalyzer = Retry.class)
 	public void  usefulLinks_navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/links.html";
 		try
@@ -125,7 +128,7 @@ public class DashboardPageTest extends TestBase {
 		}
 	}
 
-	@Test(priority=12,description="Downloads Navigation link Check")
+	@Test(priority=12,groups="Regression",retryAnalyzer = Retry.class)
 	public void  downloads_Navigation_link_Check() {
 		String elink="file:///E:/Offline%20Website/pages/examples/downloads.html";
 		try
@@ -138,47 +141,47 @@ public class DashboardPageTest extends TestBase {
 		}
 	}
 
-	@Test(priority=13,description="Sidebar menu Navigations count")
+	@Test(priority=13,groups="Regression",retryAnalyzer = Retry.class)
 	public void sidebar_Menu_Navigations_Count()
 	{
 		System.out.println("Sidebar menu Navigations count to be implemented.....");	
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=14,description="User Navigation Display check")
+	@Test(priority=14,groups="Regression",retryAnalyzer = Retry.class)
 	public void User_Navigation_isdisplayed_Check() {
 		Assert.assertEquals(DashboardPagee.usefullinksnavigationisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
 
-	@Test(priority=15,description="Oprators Navigation Display check")
+	@Test(priority=15,groups="Regression",retryAnalyzer = Retry.class)
 	public void operators_Navigation_isdisplayed() {
 		//boolean evalue=true;
 		Assert.assertEquals(DashboardPagee.operatorsnavigationisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=16,description="Useful Links Navigation Display check")
+	@Test(priority=16,groups="Regression",retryAnalyzer = Retry.class)
 	public void usefullinks_Navaigation_isdisplayed() {
 		Assert.assertEquals(DashboardPagee.usefullinksnavigationisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=17,description="Downloads  Navigation Display check")
+	@Test(priority=17,groups="Regression",retryAnalyzer = Retry.class)
 	public void downloads_navigation_isdisplayed() {
 		Assert.assertEquals(DashboardPagee.downloadsnavigationisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=18,description="Logout Navigation Display check")
+	@Test(priority=18,groups="Regression",retryAnalyzer = Retry.class)
 	public void logouttabisdisplayed() {
 		//boolean evalue=true;
 		Assert.assertEquals(DashboardPagee.logoutnavigationisdiplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=19,description="Moveover on Dashboard Navigation Bgcolor change checking")
+	@Test(priority=19,groups="Regression",retryAnalyzer = Retry.class)
 	public void moveover_Dashboard_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -190,7 +193,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=20,description="Moveover on User Navigation Bgcolor change checking")
+	@Test(priority=20,groups="Regression",retryAnalyzer = Retry.class)
 	public void moveover_User_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -203,7 +206,7 @@ public class DashboardPageTest extends TestBase {
 	}
 
 
-	@Test(priority=21,description="Moveover on Oprators Navigation Bgcolor change checking")
+	@Test(priority=21,groups="Regression",retryAnalyzer = Retry.class)
 	public void moveover_Oprators_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -216,7 +219,7 @@ public class DashboardPageTest extends TestBase {
 	}
 
 
-	@Test(priority=22,description="Moveover on Useful Navigation Bgcolor change checking")
+	@Test(priority=22,groups="Regression",retryAnalyzer = Retry.class)
 	public void moveover_UsefulLinks_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -228,7 +231,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading"); 	
 	}
 
-	@Test(priority=23,description="Moveover on Downlaods Navigation Bgcolor change checking")
+	@Test(priority=23,groups="Regression",retryAnalyzer = Retry.class)
 	public void moveover_downloads_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -240,7 +243,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");	
 	}
 
-	@Test(priority=24,description="Moveover on Logout Navigation Bgcolor change checking")
+	@Test(priority=24,groups="Regression",retryAnalyzer = Retry.class)
 	public void moveover_Logout_Bgcolor()
 	{
 		Actions builder=new Actions(driver);
@@ -252,7 +255,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=25,description="JBK Main Heading Spell Check ")
+	@Test(priority=25,groups="Regression",retryAnalyzer = Retry.class)
 	public void jbk_Main_Heading_Spell_check()
 	{
 		String etext="Java By Kiran";	
@@ -260,7 +263,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=26,description="JBK subHedding link Check ")
+	@Test(priority=26,groups="Regression",retryAnalyzer = Retry.class)
 	public void jbk_subHeading_link()
 	{
 		String aurl=DashboardPagee.jbksubheadinglink();
@@ -269,21 +272,21 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=27,description="JBK  text Logo display check ")
+	@Test(priority=27,groups="Regression",retryAnalyzer = Retry.class)
 	public void jbk_text_logo_isdisplayed()
 	{
 		Assert.assertEquals(DashboardPagee.jbktextlogoisdisplayed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=28,description="User Image display check ")
+	@Test(priority=28,groups="Regression",retryAnalyzer = Retry.class)
 	public void user_img_isdisplayed()
 	{
 		Assert.assertEquals(DashboardPagee.userimgisdisplyed(), true);
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=29,description="Dashboard Main Head speeling check ")
+	@Test(priority=29,groups="Regression",retryAnalyzer = Retry.class)
 	public void dashboard_Main_Heading_Spell()
 	{
 		String evalue="Dashboard Courses Offered";	
@@ -291,7 +294,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=30,description="Dashboard fottor speeling check ")
+	@Test(priority=30,groups="Regression",retryAnalyzer = Retry.class)
 	public void dashboard_Fotter_Spell()
 	{
 		String evalue="Copyright © 2005-2019 JavaByKiran.";	
@@ -299,7 +302,7 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=31,description="Pull right heading speeling check ")
+	@Test(priority=31,groups="Regression",retryAnalyzer = Retry.class)
 	public void pullright_Heading_spell()
 	{
 		String evalue="Design for Selenium Automation Test V 2.3.0";	
@@ -307,21 +310,21 @@ public class DashboardPageTest extends TestBase {
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=32,description="Selenium course information speeling check ")
+	@Test(priority=32,groups="Regression",retryAnalyzer = Retry.class)
 	public void selenium_Course_Spell()
 	{
 		Assert.assertEquals(DashboardPagee.seleniumcoursetext(),"Selenium");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spell of heading");
 	}
 
-	@Test(priority=33,description="automation heading speeling check ")
+	@Test(priority=33,groups="Regression",retryAnalyzer = Retry.class)
 	public void automationtest_spell()
 	{
 		Assert.assertEquals(DashboardPagee.automationtesttext(), "Automation Testing");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spel");
 	}
 	
-	@Test(priority=34)
+	@Test(priority=34,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyUserLink() throws Exception{
     System.out.println("tstcase 1 >>>verifyUserLink");
 		try {
@@ -336,7 +339,7 @@ public class DashboardPageTest extends TestBase {
 		}
 			
 	}	
-	@Test(priority=35)
+	@Test(priority=35,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyOperatorslink() {
 		System.out.println("tstcase 2 >>>verifyOperatorslink");
 		try {
@@ -351,7 +354,7 @@ public class DashboardPageTest extends TestBase {
 		}
 		System.out.println("==========================");
 	}
-	@Test(priority=36)
+	@Test(priority=36,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyUsefulLink(){
 		System.out.println("tstcase 3 >>>verifyUsefulLink");
 		DashboardPagee.usefullinksnavigationtext().click();
@@ -361,7 +364,7 @@ public class DashboardPageTest extends TestBase {
 		Assert.assertEquals(actResult, expResult);
 		System.out.println("==========================");
 	}
-	@Test(priority=37)
+	@Test(priority=37,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyDownloadLink() throws InterruptedException{
 		System.out.println("tstcase 4 >>>verifyDownloadLink");
 		DashboardPagee.downloadsnavigationtext().click();
