@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.jbk.owu.util.TestNgListener"/>
+  </listeners>
   <test name="test">
     <classes>
       <class name="com.jbk.owp.base.TestBase"/>
@@ -14,17 +17,12 @@
   </test> <!-- test -->
   <test name="test(failed)">
     <classes>
-      <class name="com.jbk.owp.test.DashboardPageTest">
+      <class name="com.jbk.owp.base.TestBase">
         <methods>
-          <include name="getResult"/>
-          <include name="moveover_downloads_Bgcolor"/>
-          <include name="moveover_Oprators_Bgcolor"/>
-          <include name="moveover_User_Bgcolor"/>
-          <include name="moveover_UsefulLinks_Bgcolor"/>
-          <include name="moveover_Logout_Bgcolor"/>
-          <include name="setupTest"/>
+          <include name="CloseApplication"/>
+          <include name="Setup"/>
         </methods>
-      </class> <!-- com.jbk.owp.test.DashboardPageTest -->
+      </class> <!-- com.jbk.owp.base.TestBase -->
       <class name="com.jbk.owp.test.LoginPageTest">
         <methods>
           <include name="getResult"/>
@@ -33,18 +31,6 @@
           <include name="setupTest"/>
         </methods>
       </class> <!-- com.jbk.owp.test.LoginPageTest -->
-      <class name="com.jbk.owp.base.TestBase">
-        <methods>
-          <include name="CloseApplication"/>
-          <include name="Setup"/>
-        </methods>
-      </class> <!-- com.jbk.owp.base.TestBase -->
-      <class name="com.jbk.owp.test.RegisterMemberPageTest">
-        <methods>
-          <include name="getResult"/>
-          <include name="setupTest"/>
-        </methods>
-      </class> <!-- com.jbk.owp.test.RegisterMemberPageTest -->
       <class name="com.jbk.owp.test.AddUserPageTest">
         <methods>
           <include name="getResult"/>
@@ -57,6 +43,22 @@
           <include name="setups"/>
         </methods>
       </class> <!-- com.jbk.owp.test.UsersTest -->
+      <class name="com.jbk.owp.test.DashboardPageTest">
+        <methods>
+          <include name="getResult"/>
+          <include name="moveover_downloads_Bgcolor"/>
+          <include name="moveover_Oprators_Bgcolor"/>
+          <include name="moveover_User_Bgcolor"/>
+          <include name="moveover_UsefulLinks_Bgcolor"/>
+          <include name="setupTest"/>
+        </methods>
+      </class> <!-- com.jbk.owp.test.DashboardPageTest -->
+      <class name="com.jbk.owp.test.RegisterMemberPageTest">
+        <methods>
+          <include name="getResult"/>
+          <include name="setupTest"/>
+        </methods>
+      </class> <!-- com.jbk.owp.test.RegisterMemberPageTest -->
       <class name="com.jbk.owp.test.UsefulLinksTest">
         <methods>
           <include name="getResult"/>
