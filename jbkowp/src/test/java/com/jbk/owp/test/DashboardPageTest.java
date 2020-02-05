@@ -20,9 +20,9 @@ import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.RegisterPage;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
-import com.jbk.owu.util.TestNgListner;
+import com.jbk.owu.util.TestNgListener;
 
-@Listeners(TestNgListner.class)
+
 public class DashboardPageTest extends TestBase {
  
 	RegisterPage Resisterpage;

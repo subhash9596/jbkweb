@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import com.jbk.owp.base.TestBase;
@@ -15,11 +16,11 @@ import com.jbk.owu.dataprovider.StaticDataProvider;
 import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.RegisterPage;
-import com.jbk.owu.util.TestNgListner;
+import com.jbk.owu.util.TestNgListener;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
 
-//@Listeners(TestNgListner.class)
+
 public class LoginPageTest extends TestBase{
 	RegisterPage Resisterpage;
 	LoginPage loginpage;
@@ -35,17 +36,18 @@ public class LoginPageTest extends TestBase{
 	
 	@Test(priority=1,groups="Regression",retryAnalyzer = Retry.class)
 	public void verify_Current_Url() throws Exception{
-		Assert.assertEquals(getcurrentURL(), "file:///E:/Offline%20Website/index.html");
 		Reports.test=Reports.extent.createTest("verifyUrl", "This test case validate to check URL of offlien application");	
+		Assert.assertEquals(getcurrentURL(), "file:///E:/Offline%20Website/index.html");
+		
 	}
 	@Test(priority=2,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyApplicationTitle() throws Exception{
-		Assert.assertEquals(getTitle(), "JavaByKiran | Log ");
 		Reports.test=Reports.extent.createTest("verifyApplicationTitle", "This test case validate to check Title of offline application");
+		Assert.assertEquals(getTitle(), "JavaByKiran | Log ");
+		
 	}
 	@Test(priority=3,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyTitle() throws Exception{
-		//getText(LoginPage.getText_title(), "test of the application")
 		Assert.assertEquals(getText(LoginPage.getText_title()),"Java By subhash");
 		Reports.test=Reports.extent.createTest("verifyTitle", "This test case validate to check text java by Kiran on login page ");
 	}

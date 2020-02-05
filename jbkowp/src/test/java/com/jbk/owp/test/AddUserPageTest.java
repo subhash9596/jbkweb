@@ -16,14 +16,13 @@ import org.testng.annotations.Test;
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
-import com.jbk.owu.util.TestNgListner;
+import com.jbk.owu.util.TestNgListener;
 import com.jbk.owu.dataprovider.StaticDataProvider;
 import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.RegisterPage;
 import com.jbk.owu.page.AddUserPage;
 import com.jbk.owu.page.LoginPage;
 
-@Listeners(TestNgListner.class)
 public class AddUserPageTest extends TestBase {
 
 	RegisterPage Resisterpage;

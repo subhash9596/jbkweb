@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.jbk.owp.base.TestBase;
+import com.jbk.owu.util.Reports;
 public class LoginPage extends TestBase  {
 	
 	public LoginPage() {
@@ -74,7 +75,7 @@ public class LoginPage extends TestBase  {
 	public DashboardPagee login(String username,String pwd)throws IOException
 	{
 		Email.clear();
-	    Email.sendKeys(username);
+		Email.sendKeys(username);
 	    Password.clear();
 	    Password.sendKeys(pwd);
 	    butn_Signin.click();

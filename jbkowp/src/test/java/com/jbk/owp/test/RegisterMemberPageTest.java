@@ -18,8 +18,8 @@ import com.jbk.owu.page.RegisterPage;
 
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
-import com.jbk.owu.util.TestNgListner;
-@Listeners(TestNgListner.class)
+import com.jbk.owu.util.TestNgListener;
+
 public class RegisterMemberPageTest extends TestBase {
 	//Class Object
 	LoginPage loginpage;
