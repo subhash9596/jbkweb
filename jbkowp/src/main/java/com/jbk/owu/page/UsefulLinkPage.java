@@ -12,8 +12,6 @@ public class UsefulLinkPage extends TestBase {
 		super();
 		PageFactory.initElements(driver,this);
 	}
-
-
 	@FindBy(xpath="//a[@href='https://www.javabykiran.com/news']")
 	private static WebElement Schedulelink;
 

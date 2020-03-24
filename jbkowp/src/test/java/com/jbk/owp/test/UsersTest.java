@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.page.DashboardPagee;
@@ -17,7 +16,7 @@ import com.jbk.owu.page.RegisterPage;
 import com.jbk.owu.page.UsersPage;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
-import com.jbk.owu.util.TestNgListener;
+
 
 public class UsersTest extends TestBase {
 
@@ -27,7 +26,7 @@ public class UsersTest extends TestBase {
 	
 	@BeforeMethod
 	public void setups() {
-		UsersPage dp= new UsersPage();
+		UsersPage up= new UsersPage();
 		DashboardPage.user();
 	}
 

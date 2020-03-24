@@ -29,7 +29,7 @@ public class DashboardPagee extends TestBase  {
 	@FindBy(xpath="//ul[@class='sidebar-menu']//*[.='Operators']")
 	private static WebElement operators_navigation_text;
 
-	@FindBy(xpath="//ul/li/a[contains(@href,\"links.html\")]")
+	@FindBy(xpath="//a[@href='links.html']")
 	private static WebElement useful_links_navigation_text;
 
 	@FindBy(xpath="//ul[@class='sidebar-menu']//*[.='Downloads']")
@@ -79,6 +79,7 @@ public class DashboardPagee extends TestBase  {
 
 	@FindBy(xpath="//*[contains(@class,\"inner\")]/p")
 	private static WebElement automationtest_text;
+	
 
 	public static WebElement  mainnavigationtext()
 	{

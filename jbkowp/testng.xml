@@ -3,7 +3,6 @@
 <suite name="Suite">
 <listeners>
 <listener class-name="com.jbk.owu.util.TestNgListener"></listener>
-
 </listeners>
 
 	<test name="test">

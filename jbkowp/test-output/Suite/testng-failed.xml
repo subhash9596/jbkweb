@@ -62,7 +62,8 @@
       <class name="com.jbk.owp.test.UsefulLinksTest">
         <methods>
           <include name="getResult"/>
-          <include name="setupTest"/>
+          <include name="Login"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- com.jbk.owp.test.UsefulLinksTest -->
     </classes>

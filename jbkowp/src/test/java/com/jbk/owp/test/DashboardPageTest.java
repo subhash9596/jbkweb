@@ -8,10 +8,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.PageFactory;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 import com.jbk.owp.base.TestBase;
@@ -20,11 +20,11 @@ import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.RegisterPage;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
-import com.jbk.owu.util.TestNgListener;
+
 
 
 public class DashboardPageTest extends TestBase {
- 
+
 	RegisterPage Resisterpage;
 	LoginPage loginpage;
 	DashboardPagee Dashboardpage;
@@ -34,6 +34,7 @@ public class DashboardPageTest extends TestBase {
 	{
 		DashboardPagee dp= new DashboardPagee();
 	}
+	
 	@Test(priority=1,groups="Regression",retryAnalyzer = Retry.class)
 	public void CheckMainNavigationText() {
 		Assert.assertEquals(DashboardPagee.mainnavigationtext().getText(), "MAIN NAVIGATION");
@@ -323,10 +324,10 @@ public class DashboardPageTest extends TestBase {
 		Assert.assertEquals(DashboardPagee.automationtesttext(), "Automation Testing");
 		Reports.test=Reports.extent.createTest("CheckMainNavigationText", "This test validate to check spel");
 	}
-	
+
 	@Test(priority=34,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyUserLink() throws Exception{
-    System.out.println("tstcase 1 >>>verifyUserLink");
+		System.out.println("tstcase 1 >>>verifyUserLink");
 		try {
 			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;
 			DashboardPagee.usernavigationtext().click();
@@ -337,7 +338,7 @@ public class DashboardPageTest extends TestBase {
 		} catch (NoSuchElementException e) {
 			System.out.println("Page not found >>> It is a error ");
 		}
-			
+
 	}	
 	@Test(priority=35,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyOperatorslink() {

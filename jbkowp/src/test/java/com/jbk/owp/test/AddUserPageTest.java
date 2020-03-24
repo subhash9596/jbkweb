@@ -2,21 +2,15 @@ package com.jbk.owp.test;
 import java.io.IOException;
 
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
-import com.jbk.owu.util.TestNgListener;
+
 import com.jbk.owu.dataprovider.StaticDataProvider;
 import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.RegisterPage;
@@ -33,7 +27,6 @@ public class AddUserPageTest extends TestBase {
 	public void setupTest() throws IOException
 	{
 		AddUserPage dp= new AddUserPage();
-		//DashboardPage.userpage();
 	}
 	@Test(priority=1,dataProviderClass=StaticDataProvider.class,dataProvider = "d_AddUser",retryAnalyzer = Retry.class)
 	public void Fill_Form(String tcid, String tcDescription,String Username,String Mobile,String Email,String Cources,String Gender,String selectvalue,String Password) throws Exception{

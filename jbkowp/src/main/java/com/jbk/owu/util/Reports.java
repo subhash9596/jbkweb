@@ -1,20 +1,25 @@
 package com.jbk.owu.util;
 
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.jbk.owp.base.TestBase;
+
 public class Reports extends TestBase {
 
 	public static ExtentHtmlReporter htmlReporter;
 	public static ExtentReports extent;
 	public static ExtentTest test;
-	
 	public static String reportPath = currentDir + "\\Reports\\" + timeStamp +"_OWPReport\\"+ "OWPReport.html";
+	
 	public static void startReport()
 	{
 		htmlReporter = new ExtentHtmlReporter(reportPath);
@@ -36,7 +41,7 @@ public class Reports extends TestBase {
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
 
-	}
+		}
 }
 //	public static ExtentHtmlReporter htmlReporter;
 //	public static ExtentReports extent;

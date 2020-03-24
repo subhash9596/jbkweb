@@ -1,22 +1,18 @@
 package com.jbk.owp.test;
 
 import org.testng.annotations.Test;
-
 import java.io.IOException;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
 import com.jbk.owp.base.TestBase;
 import com.jbk.owu.dataprovider.StaticDataProvider;
 import com.jbk.owu.page.DashboardPagee;
 import com.jbk.owu.page.LoginPage;
 import com.jbk.owu.page.RegisterPage;
-import com.jbk.owu.util.TestNgListener;
 import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Retry;
 
@@ -25,26 +21,24 @@ public class LoginPageTest extends TestBase{
 	RegisterPage Resisterpage;
 	LoginPage loginpage;
 	DashboardPagee Dashboardpage;
-	public LoginPageTest() {
-		super();
-	}
+	
 	@BeforeMethod
 	public void setupTest() throws IOException
 	{
 		loginpage = new LoginPage();
 	}
-	
+
 	@Test(priority=1,groups="Regression",retryAnalyzer = Retry.class)
 	public void verify_Current_Url() throws Exception{
 		Reports.test=Reports.extent.createTest("verifyUrl", "This test case validate to check URL of offlien application");	
 		Assert.assertEquals(getcurrentURL(), "file:///E:/Offline%20Website/index.html");
-		
+
 	}
 	@Test(priority=2,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyApplicationTitle() throws Exception{
 		Reports.test=Reports.extent.createTest("verifyApplicationTitle", "This test case validate to check Title of offline application");
 		Assert.assertEquals(getTitle(), "JavaByKiran | Log ");
-		
+
 	}
 	@Test(priority=3,groups="Regression",retryAnalyzer = Retry.class)
 	public void verifyTitle() throws Exception{
@@ -90,7 +84,7 @@ public class LoginPageTest extends TestBase{
 		System.out.println("Test Case ID >>"+tcId);
 		System.out.println("Test Case ID >>"+tcDescription);
 		Dashboardpage=loginpage.login(Username, Password);
-	//	Reports.test=Reports.extent.createTest("Login", "This test case validate to check login functionality with Blank,invalid and Valid info");
+		//	Reports.test=Reports.extent.createTest("Login", "This test case validate to check login functionality with Blank,invalid and Valid info");
 		if(tcDescription.equals("Withblankdinfo")){
 			Assert.assertEquals(getText(LoginPage.getMsg_erroremail()),expResult);
 			Reports.test=Reports.extent.createTest("LoginwithBlankInfo", "This test case validate to check login functionality with Blank info");

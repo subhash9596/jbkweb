@@ -14,8 +14,6 @@ public class UsersPage extends TestBase {
 		PageFactory.initElements(driver,this);
 		
 	}
-	
-	
 	@FindBy(xpath = "//table[@class='table table-hover']")
 	private static WebElement User_Table;
 	

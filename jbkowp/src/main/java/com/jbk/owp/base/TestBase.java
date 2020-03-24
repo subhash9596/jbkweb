@@ -33,7 +33,6 @@ import com.jbk.owu.util.Reports;
 import com.jbk.owu.util.Screenshot;
 import com.jbk.owu.util.SendEmail;
 
-
 public  class TestBase {
 	public static WebDriver  driver;
 	public static Logger logger = LogManager.getLogger(TestBase.class);
@@ -49,6 +48,7 @@ public  class TestBase {
 	public static String report = PropertyManager.getInstance().getReport();
 	public static String screenshot = PropertyManager.getInstance().getScreenshot();
 	public static String sendemail=PropertyManager.getInstance().getSendemail();
+	
 	@BeforeSuite
 	public void Setup(){
 		openBrowser();
@@ -101,15 +101,8 @@ public  class TestBase {
 		driver.manage().window().maximize();
 		return driver;		
 	}
-	@AfterSuite
-	public void CloseApplication() throws Exception{
-		logger.info("Testing is Ended ");
-		driver.quit();	
-		if(sendemail.equals("Y")){
-			SendEmail.execute(projectName+ ".html");
-		}
-	}	
-
+	
+  
 	@AfterMethod
 	public void getResult(ITestResult result) throws Exception {
 		if(report.equals("Y")){
@@ -123,10 +116,18 @@ public  class TestBase {
 			} else {
 				Reports.test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() +" Test Case Skip ", ExtentColor.ORANGE));
 				Reports.test.skip(result.getThrowable());
-			}Reports.extent.flush();
+			}
+			Reports.extent.flush();
 		}
 	}
-
+	@AfterSuite
+	public void CloseApplication() throws Exception{
+		logger.info("Testing is Ended ");
+		driver.quit();	
+		if(sendemail.equals("Y")){
+		SendEmail.execute(projectName+ ".html");
+		}
+	}	
 
 	// This method can Redirects or Navigate to particular URL
 	public static void get(String url) throws Exception {
@@ -211,7 +212,7 @@ public  class TestBase {
 				}
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+
 			//Reports.failTest(object + e.getMessage());
 
 		}
@@ -224,7 +225,6 @@ public  class TestBase {
 				element.clear();
 			
 			}
-		
 		}
 
 	// Get element text
